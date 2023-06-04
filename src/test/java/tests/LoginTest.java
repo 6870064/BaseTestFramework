@@ -1,9 +1,10 @@
 package tests;
 
+import io.qameta.allure.Feature;
 import lombok.extern.log4j.Log4j2;
-import org.junit.Test;
+import org.testng.annotations.Test;
 
-import static junit.framework.Assert.assertTrue;
+import static org.testng.Assert.assertTrue;
 
 @Log4j2
 public class LoginTest extends BaseTest {
@@ -13,7 +14,7 @@ public class LoginTest extends BaseTest {
     String usernameFieldTitle = "username";
     String passwordFieldTitle = "password";
 
-
+    @Feature("Login Feature")
     @Test(description = "Login with valid user credentials")
     public void validUserLogin() {
         loginPage.pageOpen();
