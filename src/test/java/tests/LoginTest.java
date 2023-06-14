@@ -1,12 +1,11 @@
 package tests;
 
 import io.qameta.allure.Feature;
-import lombok.extern.log4j.Log4j2;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertTrue;
 
-@Log4j2
+//@Log4j2
 public class LoginTest extends BaseTest {
 
     protected final String USER_LOGIN = System.getProperty("username", propertyReader.getPropertyValueByKey("username"));
