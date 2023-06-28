@@ -29,19 +29,19 @@ public class LoginPage extends BasePage {
 
     @Step("Setting value in the field")
     public void setValue(String fieldTitle, String input) {
-    //    log.info("Entering value {} in the field {}", input, fieldTitle);
+        //    log.info("Entering value {} in the field {}", input, fieldTitle);
         driver.findElement(By.xpath(String.format(INPUT_LOCATOR, fieldTitle))).sendKeys(input);
     }
 
     @Step("Clicking checkbox input")
     public void clickCheckBoxInput() {
-     //   log.info("Clicking on checkbox 'Remember me'");
+        //   log.info("Clicking on checkbox 'Remember me'");
         driver.findElement(By.xpath(CHECKBOX_LOCATOR)).click();
     }
 
     @Step("Clicking login button")
     public void clickLoginButton() {
-   //     log.info("Clicking on [Login] button");
+        //     log.info("Clicking on [Login] button");
         driver.findElement(SIGN_IN_BUTTON).click();
     }
 }

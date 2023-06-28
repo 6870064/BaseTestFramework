@@ -1,15 +1,17 @@
 package tests;
 
 import io.qameta.allure.Feature;
+import lombok.extern.log4j.Log4j2;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertTrue;
 
-//@Log4j2
+@Log4j2
 public class LoginTest extends BaseTest {
 
     protected final String USER_LOGIN = System.getProperty("username", propertyReader.getPropertyValueByKey("username"));
     protected final String USER_PASSWORD = System.getProperty("username", propertyReader.getPropertyValueByKey("password"));
+    String invalidUserLogin = "bla bla bla";
     String usernameFieldTitle = "username";
     String passwordFieldTitle = "password";
 
@@ -23,5 +25,18 @@ public class LoginTest extends BaseTest {
         loginPage.clickCheckBoxInput();
         loginPage.clickLoginButton();
         mainPage.isPageOpened();
+    }
+
+    @Feature("Login Feature")
+    @Test(description = "Login with valid user credentials")
+    public void invalidUserLogin() {
+        loginPage.pageOpen();
+        assertTrue(loginPage.isPageOpened(), "Login page is not opened");
+        loginPage.setValue(usernameFieldTitle, invalidUserLogin);
+        loginPage.setValue(passwordFieldTitle, USER_PASSWORD);
+        loginPage.clickCheckBoxInput();
+        loginPage.clickLoginButton();
+        mainPage.isPageOpened();
+
     }
 }

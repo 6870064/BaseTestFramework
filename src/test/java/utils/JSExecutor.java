@@ -15,7 +15,6 @@ public class JSExecutor {
         wait = new WebDriverWait(driver, 20000);
     }
 
-
     public void scrollToElement(WebElement element) {
 
         wait = new WebDriverWait(driver, 20000);
