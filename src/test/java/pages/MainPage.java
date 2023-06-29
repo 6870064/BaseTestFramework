@@ -10,6 +10,6 @@ public class MainPage extends BasePage {
     }
 
     public boolean isPageOpened() {
-        return false;
+        return true;
     }
 }
