@@ -1,13 +1,14 @@
 package pages;
 
 import io.qameta.allure.Step;
+import lombok.extern.log4j.Log4j2;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import tests.BaseTest;
 
 import static tests.BaseTest.driver;
 
-//@Log4j2
+@Log4j2
 public class LoginPage extends BasePage {
 
     public static final By SIGN_IN_BUTTON = By.xpath("//a[@class='btn btn-primary']");
@@ -29,19 +30,19 @@ public class LoginPage extends BasePage {
 
     @Step("Setting value in the field")
     public void setValue(String fieldTitle, String input) {
-    //    log.info("Entering value {} in the field {}", input, fieldTitle);
+        log.info("Entering value {} in the field {}", input, fieldTitle);
         driver.findElement(By.xpath(String.format(INPUT_LOCATOR, fieldTitle))).sendKeys(input);
     }
 
     @Step("Clicking checkbox input")
     public void clickCheckBoxInput() {
-     //   log.info("Clicking on checkbox 'Remember me'");
+        log.info("Clicking on checkbox 'Remember me'");
         driver.findElement(By.xpath(CHECKBOX_LOCATOR)).click();
     }
 
     @Step("Clicking login button")
     public void clickLoginButton() {
-   //     log.info("Clicking on [Login] button");
+        log.info("Clicking on [Login] button");
         driver.findElement(SIGN_IN_BUTTON).click();
     }
 }
