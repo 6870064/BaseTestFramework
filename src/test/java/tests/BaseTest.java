@@ -12,14 +12,13 @@ import utils.PropertyReader;
 import utils.WebDriver_Initializer;
 
 @Log4j2
-//@Listeners(TestListener.class)
+
 public abstract class BaseTest {
 
     public static PropertyReader propertyReader = new PropertyReader("src/test/resources/configuration.properties");
     public static WebDriver_Initializer webDriverInitializer = WebDriver_Initializer.getInstance();
     public static WebDriver driver = webDriverInitializer.driverInitialization();
     public static String BASE_URL = propertyReader.getPropertyValueByKey("base.url");
-
 
     LoginPage loginPage = new LoginPage(driver);
     MainPage mainPage = new MainPage(driver);

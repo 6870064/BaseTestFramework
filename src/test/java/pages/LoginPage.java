@@ -28,13 +28,13 @@ public class LoginPage extends BasePage {
         return isElementExist(SIGN_IN_BUTTON);
     }
 
-    @Step("Setting value in the field")
+    @Step("Setting value in the field {fieldTitle}")
     public void setValue(String fieldTitle, String input) {
         log.info("Entering value {} in the field {}", input, fieldTitle);
         driver.findElement(By.xpath(String.format(INPUT_LOCATOR, fieldTitle))).sendKeys(input);
     }
 
-    @Step("Clicking checkbox input")
+    @Step("Clicking on checkbox 'Remember me'")
     public void clickCheckBoxInput() {
         log.info("Clicking on checkbox 'Remember me'");
         driver.findElement(By.xpath(CHECKBOX_LOCATOR)).click();

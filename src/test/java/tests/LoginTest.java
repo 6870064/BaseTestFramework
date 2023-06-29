@@ -1,12 +1,18 @@
 package tests;
 
-import io.qameta.allure.Feature;
+import io.qameta.allure.*;
 import lombok.extern.log4j.Log4j2;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+import utils.TestListener;
 
 import static org.testng.Assert.assertTrue;
 
+@Listeners({ TestListener.class })
+@Epic("Regression Tests")
+@Feature("Login Feature")
 @Log4j2
+
 public class LoginTest extends BaseTest {
 
     protected final String USER_LOGIN = System.getProperty("username", propertyReader.getPropertyValueByKey("username"));
@@ -15,8 +21,10 @@ public class LoginTest extends BaseTest {
     String wrongUserLogin = "bla bla bla";
     String passwordFieldTitle = "password";
 
-    @Feature("Login Feature")
-    @Test(description = "Login with valid user credentials")
+    @Test(priority = 0, description = "Login with valid user credentials")
+    @Severity(SeverityLevel.BLOCKER)
+    @Description("Test Description: login test with valid username and valid password.")
+    @Story("Valid username and password login test")
     public void validUserLogin() {
         loginPage.pageOpen();
         assertTrue(loginPage.isPageOpened(), "Login page is not opened");
@@ -27,7 +35,10 @@ public class LoginTest extends BaseTest {
         mainPage.isPageOpened();
     }
 
-    @Test(description = "Login with invalid user credentials")
+    @Test(priority = 0, description = "Login with invalid user credentials")
+    @Severity(SeverityLevel.BLOCKER)
+    @Description("Test Description: login test with invalid username and valid password.")
+    @Story("Valid username and password login test")
     public void invalidUserLogin() {
         loginPage.pageOpen();
         assertTrue(loginPage.isPageOpened(), "Login page is not opened");
