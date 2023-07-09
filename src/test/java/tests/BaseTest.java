@@ -2,17 +2,15 @@ package tests;
 
 import lombok.extern.log4j.Log4j2;
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Optional;
-import org.testng.annotations.Parameters;
+import org.testng.annotations.*;
 import pages.LoginPage;
 import pages.MainPage;
 import utils.PropertyReader;
+import utils.TestListener;
 import utils.WebDriver_Initializer;
 
 @Log4j2
-
+@Listeners(TestListener.class)
 public abstract class BaseTest {
 
     public static PropertyReader propertyReader = new PropertyReader("src/test/resources/configuration.properties");
@@ -26,6 +24,7 @@ public abstract class BaseTest {
     @Parameters({"browser"})
     @BeforeMethod()
     public void setUp(@Optional("chrome") String browser) {
+    driver = webDriverInitializer.driverInitialization();
     }
 
     @AfterMethod()
