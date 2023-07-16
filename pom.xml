@@ -20,7 +20,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
-        <version>3.0.0-M5</version>
+        <version>3.0.0-M7</version>
         <configuration>
           <suiteXmlFiles>
             <suiteXmlFile>TestNG.xml</suiteXmlFile>
@@ -28,6 +28,15 @@
           <argLine>
             -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/1.9.6/aspectjweaver-1.9.6.jar"
           </argLine>
+          <parallel>methods</parallel>
+          <threadCount>3</threadCount>
+          <perCoreThreadCount>false</perCoreThreadCount>
+          <systemProperties>
+            <property>
+              <name>allure.results.directory</name>
+              <value>target/allure-results</value>
+            </property>
+          </systemProperties>
         </configuration>
         <dependencies>
           <dependency>
@@ -39,6 +48,22 @@
       </plugin>
     </plugins>
   </build>
+
+  <reporting>
+    <excludeDefaults>true</excludeDefaults>
+    <plugins>
+      <plugin>
+        <groupId>io.qameta.allure</groupId>
+        <artifactId>allure-maven</artifactId>
+        <version>2.12.0</version>
+        <configuration>
+          <reportVersion>2.14.0</reportVersion>
+          <outputDirectory>${basedir}/target/allure-reports/</outputDirectory>
+          <reportDirectory>${basedir}/target/allure-results</reportDirectory>
+        </configuration>
+      </plugin>
+    </plugins>
+  </reporting>
 
   <dependencies>
 
@@ -89,4 +114,5 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+
 </project>
