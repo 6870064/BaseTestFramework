@@ -32,6 +32,7 @@ public class WebDriver_Initializer {
 
     private ChromeOptions setOptionsForChromeDriver(@Optional("chrome") String browser) {
         ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments("--remote-allow-origins=*");
         if (browser.equals("chrome")) {
             WebDriverManager.chromedriver().setup();
             if (BaseTest.propertyReader.getPropertyValueByKey("headless").equals("true")) {
