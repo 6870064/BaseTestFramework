@@ -1,4 +1,4 @@
-package tests;
+package tests.gui;
 
 import io.qameta.allure.*;
 import lombok.extern.log4j.Log4j2;

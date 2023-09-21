@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.Optional;
-import tests.BaseTest;
+import tests.gui.BaseTest;
 
 import java.util.concurrent.TimeUnit;
 
