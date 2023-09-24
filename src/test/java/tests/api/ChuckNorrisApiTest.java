@@ -1,44 +1,43 @@
 package tests.api;
 
-import io.restassured.RestAssured;
-import io.restassured.http.Method;
-import io.restassured.response.Response;
-import io.restassured.specification.RequestSpecification;
+import lombok.extern.log4j.Log4j2;
 import org.apache.hc.core5.http.HttpStatus;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import static io.restassured.RestAssured.baseURI;
 import static io.restassured.RestAssured.given;
 
-public class ChuckNorrisApiTest {
+@Log4j2
+public class ChuckNorrisApiTest extends BaseApiTest {
 
     @Test
-    public void ApiTest() {
+    public void ApiResponseCodeApiTest() {
 
-        Logger logger = LogManager.getLogger(ChuckNorrisApiTest.class);
+        given()
+                .when()
+                .get(baseURI)
+                .then()
+                .statusCode(HttpStatus.SC_OK)
+                .log().status()
+                .statusCode(200);
+    }
 
-        //setup RestAssured
-        RestAssured.baseURI = "https://api.chucknorris.io";
+    @Test
+    public void ApiCategoriesResponseApiTest() {
 
         //Setup Endpoint
         String categoriesEndpoint = "/jokes/categories/";
 
-        //Setup Request Object
-        RequestSpecification httpRequest = given();
-
-        //Setup Response Object
-        Response response = httpRequest.request(Method.GET, categoriesEndpoint);
-
-        //Assertions
-        int statusCode = response.getStatusCode();
-
-        Assert.assertEquals(statusCode, 200);
-        Assert.assertEquals(statusCode, HttpStatus.SC_OK);
-
-        //Get Response's body
-        logger.info(response.getBody());
-
+        given()
+                .when()
+                .get(categoriesEndpoint)
+                .then()
+                .statusCode(HttpStatus.SC_OK)
+                .statusCode(200)
+                .log().status()
+                .log().body();
     }
+
+
+
 }
