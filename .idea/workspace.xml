@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a037309-27bc-4d5f-83fe-da076962cb5c" name="Changes" comment="Initial commit">
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/api/BaseApiTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/api/Before.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="0a037309-27bc-4d5f-83fe-da076962cb5c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/api/ChuckNorrisApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/api/ChuckNorrisApiTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -74,7 +70,7 @@
       <recent name="$PROJECT_DIR$/src/test/resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.ChuckNorrisApiTest.ApiCategoriesResponseApiTest">
+  <component name="RunManager" selected="TestNG.ChuckNorrisApiTest.ApiCategoriesValidationTest">
     <configuration name="ChuckNorrisApiTest.ApiCategoriesResponseApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="BaseTestFramework" />
       <extension name="coverage">
@@ -93,6 +89,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ChuckNorrisApiTest.ApiCategoriesValidationTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="BaseTestFramework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.api.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests.api" />
+      <option name="MAIN_CLASS_NAME" value="tests.api.ChuckNorrisApiTest" />
+      <option name="METHOD_NAME" value="ApiCategoriesValidationTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ChuckNorrisApiTest.ApiResponseCodeApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="BaseTestFramework" />
       <extension name="coverage">
@@ -104,24 +118,6 @@
       <option name="PACKAGE_NAME" value="tests.api" />
       <option name="MAIN_CLASS_NAME" value="tests.api.ChuckNorrisApiTest" />
       <option name="METHOD_NAME" value="ApiResponseCodeApiTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ChuckNorrisApiTest.ApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="BaseTestFramework" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.api.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests.api" />
-      <option name="MAIN_CLASS_NAME" value="tests.api.ChuckNorrisApiTest" />
-      <option name="METHOD_NAME" value="ApiTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -194,19 +190,19 @@
     </configuration>
     <list>
       <item itemvalue="TestNG.LoginTest" />
+      <item itemvalue="TestNG.ChuckNorrisApiTest.ApiCategoriesValidationTest" />
       <item itemvalue="TestNG.ChuckNorrisApiTest.ApiCategoriesResponseApiTest" />
       <item itemvalue="TestNG.ChuckNorrisApiTest.ApiResponseCodeApiTest" />
-      <item itemvalue="TestNG.ChuckNorrisApiTest.ApiTest" />
       <item itemvalue="TestNG.ChuckNorrisApiTest.ChuckNorrisApiTest" />
       <item itemvalue="TestNG.ChuckNorrisApiTest.simpleApiTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.ChuckNorrisApiTest.ApiCategoriesValidationTest" />
         <item itemvalue="TestNG.ChuckNorrisApiTest.ApiCategoriesResponseApiTest" />
         <item itemvalue="TestNG.ChuckNorrisApiTest.ApiResponseCodeApiTest" />
         <item itemvalue="TestNG.ChuckNorrisApiTest.ChuckNorrisApiTest" />
         <item itemvalue="TestNG.ChuckNorrisApiTest.simpleApiTest" />
-        <item itemvalue="TestNG.ChuckNorrisApiTest.ApiTest" />
       </list>
     </recent_temporary>
   </component>
@@ -268,7 +264,14 @@
       <option name="project" value="LOCAL" />
       <updated>1690724849824</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Initial commit">
+      <created>1695587128616</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1695587128616</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -277,8 +280,8 @@
     <MESSAGE value="Editing pom.xml and TestNG.xml." />
     <MESSAGE value="pom fix" />
     <MESSAGE value="allure-results folder is successfully generated." />
-    <MESSAGE value="Initial commit" />
     <MESSAGE value="Chuck Norris tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Chuck Norris tests" />
+    <MESSAGE value="Initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
   </component>
 </project>
