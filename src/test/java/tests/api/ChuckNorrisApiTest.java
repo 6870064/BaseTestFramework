@@ -3,6 +3,7 @@ package tests.api;
 import io.restassured.response.Response;
 import lombok.extern.log4j.Log4j2;
 import org.apache.hc.core5.http.HttpStatus;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.baseURI;
@@ -72,9 +73,10 @@ public class ChuckNorrisApiTest extends BaseApiTest {
                 .extract()
                 .response();
 
-        String[] myList = response.getBody().jsonPath().get();
+        String[] myList = response.getBody().jsonPath().getList();
 
-       // Assert.assertEquals(myList,categoriesList);
+        Assert.assertEquals(myList,categoriesList);
+        //
 
     }
 
