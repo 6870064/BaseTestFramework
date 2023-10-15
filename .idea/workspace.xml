@@ -70,7 +70,7 @@
       <recent name="$PROJECT_DIR$/src/test/resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.ChuckNorrisApiTest.ApiCategoriesValidationTest">
+  <component name="RunManager" selected="TestNG.ChuckNorrisApiTest.ApiJokesValidationTest">
     <configuration name="ChuckNorrisApiTest.ApiCategoriesResponseApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="BaseTestFramework" />
       <extension name="coverage">
@@ -100,6 +100,24 @@
       <option name="PACKAGE_NAME" value="tests.api" />
       <option name="MAIN_CLASS_NAME" value="tests.api.ChuckNorrisApiTest" />
       <option name="METHOD_NAME" value="ApiCategoriesValidationTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ChuckNorrisApiTest.ApiJokesValidationTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="BaseTestFramework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.api.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests.api" />
+      <option name="MAIN_CLASS_NAME" value="tests.api.ChuckNorrisApiTest" />
+      <option name="METHOD_NAME" value="ApiJokesValidationTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -143,24 +161,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ChuckNorrisApiTest.simpleApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="BaseTestFramework" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.api.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests.api" />
-      <option name="MAIN_CLASS_NAME" value="tests.api.ChuckNorrisApiTest" />
-      <option name="METHOD_NAME" value="simpleApiTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="LoginTest" type="TestNG" nameIsGenerated="true">
       <module name="BaseTestFramework" />
       <shortenClasspath name="NONE" />
@@ -190,19 +190,19 @@
     </configuration>
     <list>
       <item itemvalue="TestNG.LoginTest" />
+      <item itemvalue="TestNG.ChuckNorrisApiTest.ApiJokesValidationTest" />
       <item itemvalue="TestNG.ChuckNorrisApiTest.ApiCategoriesValidationTest" />
       <item itemvalue="TestNG.ChuckNorrisApiTest.ApiCategoriesResponseApiTest" />
       <item itemvalue="TestNG.ChuckNorrisApiTest.ApiResponseCodeApiTest" />
       <item itemvalue="TestNG.ChuckNorrisApiTest.ChuckNorrisApiTest" />
-      <item itemvalue="TestNG.ChuckNorrisApiTest.simpleApiTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.ChuckNorrisApiTest.ApiJokesValidationTest" />
         <item itemvalue="TestNG.ChuckNorrisApiTest.ApiCategoriesValidationTest" />
         <item itemvalue="TestNG.ChuckNorrisApiTest.ApiCategoriesResponseApiTest" />
         <item itemvalue="TestNG.ChuckNorrisApiTest.ApiResponseCodeApiTest" />
         <item itemvalue="TestNG.ChuckNorrisApiTest.ChuckNorrisApiTest" />
-        <item itemvalue="TestNG.ChuckNorrisApiTest.simpleApiTest" />
       </list>
     </recent_temporary>
   </component>
@@ -271,7 +271,14 @@
       <option name="project" value="LOCAL" />
       <updated>1695587128616</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="tests">
+      <created>1696242028794</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1696242028794</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -282,6 +289,7 @@
     <MESSAGE value="allure-results folder is successfully generated." />
     <MESSAGE value="Chuck Norris tests" />
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value="tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="tests" />
   </component>
 </project>
