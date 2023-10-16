@@ -4,9 +4,9 @@ import io.qameta.allure.Step;
 import lombok.extern.log4j.Log4j2;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import tests.BaseTest;
+import tests.gui.BaseTest;
 
-import static tests.BaseTest.driver;
+import static tests.gui.BaseTest.driver;
 
 @Log4j2
 public class LoginPage extends BasePage {
