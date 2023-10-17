@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a037309-27bc-4d5f-83fe-da076962cb5c" name="Changes" comment="">
+    <list default="true" id="0a037309-27bc-4d5f-83fe-da076962cb5c" name="Changes" comment="Fox of ApiCategoriesValidationTest() Api Test">
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/api/DummyApiTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/file.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/api/ChuckNorrisApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/api/ChuckNorrisApiTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,8 +23,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="AnnotationType" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -50,18 +54,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/dzmitryviachaslavau/Documents/Projects/BaseTestFramework&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "/Users/dzmitryviachaslavau/Documents/Projects/BaseTestFramework",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="tests.api" />
@@ -190,8 +194,8 @@
     </configuration>
     <list>
       <item itemvalue="TestNG.LoginTest" />
-      <item itemvalue="TestNG.ChuckNorrisApiTest.ApiJokesValidationTest" />
       <item itemvalue="TestNG.ChuckNorrisApiTest.ApiCategoriesValidationTest" />
+      <item itemvalue="TestNG.ChuckNorrisApiTest.ApiJokesValidationTest" />
       <item itemvalue="TestNG.ChuckNorrisApiTest.ApiCategoriesResponseApiTest" />
       <item itemvalue="TestNG.ChuckNorrisApiTest.ApiResponseCodeApiTest" />
       <item itemvalue="TestNG.ChuckNorrisApiTest.ChuckNorrisApiTest" />
@@ -264,19 +268,19 @@
       <option name="project" value="LOCAL" />
       <updated>1690724849824</updated>
     </task>
-    <task id="LOCAL-00008" summary="Initial commit">
-      <created>1695587128616</created>
+    <task id="LOCAL-00008" summary="Api Test">
+      <created>1697232340463</created>
       <option name="number" value="00008" />
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
-      <updated>1695587128616</updated>
+      <updated>1697232340463</updated>
     </task>
-    <task id="LOCAL-00009" summary="tests">
-      <created>1696242028794</created>
+    <task id="LOCAL-00009" summary="Fox of ApiCategoriesValidationTest() Api Test">
+      <created>1697452275353</created>
       <option name="number" value="00009" />
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
-      <updated>1696242028794</updated>
+      <updated>1697452275354</updated>
     </task>
     <option name="localTasksCounter" value="10" />
     <servers />
@@ -287,9 +291,10 @@
     <MESSAGE value="Editing pom.xml and TestNG.xml." />
     <MESSAGE value="pom fix" />
     <MESSAGE value="allure-results folder is successfully generated." />
-    <MESSAGE value="Chuck Norris tests" />
     <MESSAGE value="Initial commit" />
-    <MESSAGE value="tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="tests" />
+    <MESSAGE value="Chuck Norris tests" />
+    <MESSAGE value="Api Test" />
+    <MESSAGE value="Fox of ApiCategoriesValidationTest() Api Test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fox of ApiCategoriesValidationTest() Api Test" />
   </component>
 </project>

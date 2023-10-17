@@ -94,5 +94,10 @@ public class ChuckNorrisApiTest extends BaseApiTest {
                 .extract()
                 .response();
 
+        Assert.assertFalse(response.getBody().jsonPath().get("id").toString().isEmpty());
+        Assert.assertFalse(response.getBody().jsonPath().get("created_at").toString().isEmpty());
+        Assert.assertFalse(response.getBody().jsonPath().get("icon_url").toString().isEmpty());
+        Assert.assertFalse(response.getBody().jsonPath().get("updated_at").toString().isEmpty());
+        Assert.assertFalse(response.getBody().jsonPath().get("value").toString().isEmpty());
     }
 }
