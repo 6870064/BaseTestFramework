@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a037309-27bc-4d5f-83fe-da076962cb5c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/dummy_api/BaseDummyTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/dummy_api/DummyApiTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/api/BaseApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/chucknorris_api/BaseChuckNorrisApiTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/api/Before.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/api/ChuckNorrisApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/chucknorris_api/ChuckNorrisApiTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/api/DummyApiTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/api/HttpClientTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/chucknorris_api/HttpClientTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dummy_api/DummyApiTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dummy_api/DummyApiTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,54 +71,18 @@
       <recent name="$PROJECT_DIR$/src/test/resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.DummyApiTests.dummyApiTest">
-    <configuration name="ChuckNorrisApiTest.ApiCategoriesResponseApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.DummyApiTests.createUserTest">
+    <configuration name="DummyApiTests.createUserTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="BaseTestFramework" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.api.*" />
+          <option name="PATTERN" value="dummy_api.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tests.api" />
-      <option name="MAIN_CLASS_NAME" value="tests.api.ChuckNorrisApiTest" />
-      <option name="METHOD_NAME" value="ApiCategoriesResponseApiTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ChuckNorrisApiTest.ApiCategoriesValidationTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="BaseTestFramework" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.api.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests.api" />
-      <option name="MAIN_CLASS_NAME" value="tests.api.ChuckNorrisApiTest" />
-      <option name="METHOD_NAME" value="ApiCategoriesValidationTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ChuckNorrisApiTest.ApiJokesValidationTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="BaseTestFramework" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.api.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests.api" />
-      <option name="MAIN_CLASS_NAME" value="tests.api.ChuckNorrisApiTest" />
-      <option name="METHOD_NAME" value="ApiJokesValidationTest" />
+      <option name="PACKAGE_NAME" value="dummy_api" />
+      <option name="MAIN_CLASS_NAME" value="dummy_api.DummyApiTests" />
+      <option name="METHOD_NAME" value="createUserTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -150,7 +108,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DummyApiTests.dummyApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="DummyApiTests.dummyOneUserApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="BaseTestFramework" />
       <extension name="coverage">
         <pattern>
@@ -160,7 +118,43 @@
       </extension>
       <option name="PACKAGE_NAME" value="dummy_api" />
       <option name="MAIN_CLASS_NAME" value="dummy_api.DummyApiTests" />
-      <option name="METHOD_NAME" value="dummyApiTest" />
+      <option name="METHOD_NAME" value="dummyOneUserApiTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DummyApiTests.dummyUserApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="BaseTestFramework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dummy_api.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dummy_api" />
+      <option name="MAIN_CLASS_NAME" value="dummy_api.DummyApiTests" />
+      <option name="METHOD_NAME" value="dummyUserApiTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DummyApiTests.dummyUsersApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="BaseTestFramework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dummy_api.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dummy_api" />
+      <option name="MAIN_CLASS_NAME" value="dummy_api.DummyApiTests" />
+      <option name="METHOD_NAME" value="dummyUsersApiTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -197,19 +191,19 @@
     </configuration>
     <list>
       <item itemvalue="TestNG.LoginTest" />
+      <item itemvalue="TestNG.DummyApiTests.createUserTest" />
       <item itemvalue="TestNG.DummyApiTests.dummieApiTest" />
-      <item itemvalue="TestNG.DummyApiTests.dummyApiTest" />
-      <item itemvalue="TestNG.ChuckNorrisApiTest.ApiJokesValidationTest" />
-      <item itemvalue="TestNG.ChuckNorrisApiTest.ApiCategoriesValidationTest" />
-      <item itemvalue="TestNG.ChuckNorrisApiTest.ApiCategoriesResponseApiTest" />
+      <item itemvalue="TestNG.DummyApiTests.dummyOneUserApiTest" />
+      <item itemvalue="TestNG.DummyApiTests.dummyUserApiTest" />
+      <item itemvalue="TestNG.DummyApiTests.dummyUsersApiTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.DummyApiTests.dummyApiTest" />
+        <item itemvalue="TestNG.DummyApiTests.createUserTest" />
+        <item itemvalue="TestNG.DummyApiTests.dummyOneUserApiTest" />
+        <item itemvalue="TestNG.DummyApiTests.dummyUserApiTest" />
+        <item itemvalue="TestNG.DummyApiTests.dummyUsersApiTest" />
         <item itemvalue="TestNG.DummyApiTests.dummieApiTest" />
-        <item itemvalue="TestNG.ChuckNorrisApiTest.ApiJokesValidationTest" />
-        <item itemvalue="TestNG.ChuckNorrisApiTest.ApiCategoriesValidationTest" />
-        <item itemvalue="TestNG.ChuckNorrisApiTest.ApiCategoriesResponseApiTest" />
       </list>
     </recent_temporary>
   </component>
@@ -292,7 +286,14 @@
       <option name="project" value="LOCAL" />
       <updated>1697405639102</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Dummy first test">
+      <created>1698596043460</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1698596043460</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -304,6 +305,7 @@
     <MESSAGE value="Chuck Norris tests" />
     <MESSAGE value="Initial commit" />
     <MESSAGE value="tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="tests" />
+    <MESSAGE value="Dummy first test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dummy first test" />
   </component>
 </project>
