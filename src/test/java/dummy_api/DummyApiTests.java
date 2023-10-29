@@ -89,11 +89,11 @@ public class DummyApiTests extends BaseDummyTest {
         Assert.assertEquals(200, response.statusCode());
         Assert.assertEquals("mr", response.jsonPath().getString("title"));
         Assert.assertEquals("Billy", response.jsonPath().getString("firstName"));
+        //TODO уточнить про email
         Assert.assertEquals("Bob Tornton", response.jsonPath().getString("lastName"));
         Assert.assertEquals("male", response.jsonPath().getString("gender"));
         Assert.assertEquals("bobtornton3333@gmail.com", response.jsonPath().getString("email"));
         Assert.assertEquals("1980-07-05T22:21:32.623Z", response.jsonPath().getString("dateOfBirth"));
 
     }
-
 }
