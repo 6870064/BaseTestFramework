@@ -1,4 +1,4 @@
-package tests.api;
+package chucknorris_api;
 
 import io.restassured.response.Response;
 import lombok.extern.log4j.Log4j2;
@@ -13,7 +13,7 @@ import static io.restassured.RestAssured.baseURI;
 import static io.restassured.RestAssured.given;
 
 @Log4j2
-public class ChuckNorrisApiTest extends BaseApiTest {
+public class ChuckNorrisApiTest extends BaseChuckNorrisApiTest {
 
     @Test
     public void ApiResponseCodeApiTest() {

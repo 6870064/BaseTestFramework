@@ -4,13 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a037309-27bc-4d5f-83fe-da076962cb5c" name="Changes" comment="Fox of ApiCategoriesValidationTest() Api Test">
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/api/DummyApiTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/file.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="0a037309-27bc-4d5f-83fe-da076962cb5c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/dummy_api/BaseDummyTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/dummy_api/DummyApiTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/api/ChuckNorrisApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/api/ChuckNorrisApiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/api/BaseApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/chucknorris_api/BaseChuckNorrisApiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/api/Before.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/api/ChuckNorrisApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/chucknorris_api/ChuckNorrisApiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/api/DummyApiTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/api/HttpClientTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/chucknorris_api/HttpClientTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,18 +56,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/Users/dzmitryviachaslavau/Documents/Projects/BaseTestFramework",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;ignore.preview.features.used&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/dzmitryviachaslavau/Documents/Projects/BaseTestFramework&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="tests.api" />
@@ -74,7 +77,7 @@
       <recent name="$PROJECT_DIR$/src/test/resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.ChuckNorrisApiTest.ApiJokesValidationTest">
+  <component name="RunManager" selected="TestNG.DummyApiTests.dummyApiTest">
     <configuration name="ChuckNorrisApiTest.ApiCategoriesResponseApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="BaseTestFramework" />
       <extension name="coverage">
@@ -129,7 +132,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ChuckNorrisApiTest.ApiResponseCodeApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="DummyApiTests.dummieApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="BaseTestFramework" />
       <extension name="coverage">
         <pattern>
@@ -138,8 +141,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests.api" />
-      <option name="MAIN_CLASS_NAME" value="tests.api.ChuckNorrisApiTest" />
-      <option name="METHOD_NAME" value="ApiResponseCodeApiTest" />
+      <option name="MAIN_CLASS_NAME" value="tests.api.DummyApiTests" />
+      <option name="METHOD_NAME" value="dummieApiTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -147,17 +150,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ChuckNorrisApiTest.ChuckNorrisApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="DummyApiTests.dummyApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="BaseTestFramework" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.api.*" />
+          <option name="PATTERN" value="dummy_api.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tests.api" />
-      <option name="MAIN_CLASS_NAME" value="tests.api.ChuckNorrisApiTest" />
-      <option name="METHOD_NAME" value="ChuckNorrisApiTest" />
+      <option name="PACKAGE_NAME" value="dummy_api" />
+      <option name="MAIN_CLASS_NAME" value="dummy_api.DummyApiTests" />
+      <option name="METHOD_NAME" value="dummyApiTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -194,19 +197,19 @@
     </configuration>
     <list>
       <item itemvalue="TestNG.LoginTest" />
-      <item itemvalue="TestNG.ChuckNorrisApiTest.ApiCategoriesValidationTest" />
+      <item itemvalue="TestNG.DummyApiTests.dummieApiTest" />
+      <item itemvalue="TestNG.DummyApiTests.dummyApiTest" />
       <item itemvalue="TestNG.ChuckNorrisApiTest.ApiJokesValidationTest" />
+      <item itemvalue="TestNG.ChuckNorrisApiTest.ApiCategoriesValidationTest" />
       <item itemvalue="TestNG.ChuckNorrisApiTest.ApiCategoriesResponseApiTest" />
-      <item itemvalue="TestNG.ChuckNorrisApiTest.ApiResponseCodeApiTest" />
-      <item itemvalue="TestNG.ChuckNorrisApiTest.ChuckNorrisApiTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.DummyApiTests.dummyApiTest" />
+        <item itemvalue="TestNG.DummyApiTests.dummieApiTest" />
         <item itemvalue="TestNG.ChuckNorrisApiTest.ApiJokesValidationTest" />
         <item itemvalue="TestNG.ChuckNorrisApiTest.ApiCategoriesValidationTest" />
         <item itemvalue="TestNG.ChuckNorrisApiTest.ApiCategoriesResponseApiTest" />
-        <item itemvalue="TestNG.ChuckNorrisApiTest.ApiResponseCodeApiTest" />
-        <item itemvalue="TestNG.ChuckNorrisApiTest.ChuckNorrisApiTest" />
       </list>
     </recent_temporary>
   </component>
@@ -268,21 +271,28 @@
       <option name="project" value="LOCAL" />
       <updated>1690724849824</updated>
     </task>
-    <task id="LOCAL-00008" summary="Api Test">
-      <created>1697232340463</created>
+    <task id="LOCAL-00008" summary="Initial commit">
+      <created>1695587128616</created>
       <option name="number" value="00008" />
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
-      <updated>1697232340463</updated>
+      <updated>1695587128616</updated>
     </task>
-    <task id="LOCAL-00009" summary="Fox of ApiCategoriesValidationTest() Api Test">
-      <created>1697452275353</created>
+    <task id="LOCAL-00009" summary="tests">
+      <created>1696242028794</created>
       <option name="number" value="00009" />
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
-      <updated>1697452275354</updated>
+      <updated>1696242028794</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="tests">
+      <created>1697405639102</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1697405639102</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -291,10 +301,9 @@
     <MESSAGE value="Editing pom.xml and TestNG.xml." />
     <MESSAGE value="pom fix" />
     <MESSAGE value="allure-results folder is successfully generated." />
-    <MESSAGE value="Initial commit" />
     <MESSAGE value="Chuck Norris tests" />
-    <MESSAGE value="Api Test" />
-    <MESSAGE value="Fox of ApiCategoriesValidationTest() Api Test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fox of ApiCategoriesValidationTest() Api Test" />
+    <MESSAGE value="Initial commit" />
+    <MESSAGE value="tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="tests" />
   </component>
 </project>

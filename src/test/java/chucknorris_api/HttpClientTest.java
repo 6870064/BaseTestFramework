@@ -1,4 +1,4 @@
-package tests.api;
+package chucknorris_api;
 
 import org.apache.hc.client5.http.classic.methods.HttpGet;
 import org.apache.hc.client5.http.classic.methods.HttpUriRequest;
