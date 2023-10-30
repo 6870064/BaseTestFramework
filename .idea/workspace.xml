@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a037309-27bc-4d5f-83fe-da076962cb5c" name="Changes" comment="" />
+    <list default="true" id="0a037309-27bc-4d5f-83fe-da076962cb5c" name="Changes" comment="Fox of ApiCategoriesValidationTest() Api Test">
+      <change afterPath="$PROJECT_DIR$/src/test/resources/request.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dummy_api/DummyApiTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dummy_api/DummyApiTests.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,7 +56,6 @@
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;ignore.preview.features.used&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/dzmitryviachaslavau/Documents/Projects/BaseTestFramework&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
@@ -68,7 +71,43 @@
       <recent name="$PROJECT_DIR$/src/test/resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.DummyApiTests.createUserTest">
+  <component name="RunManager" selected="TestNG.DummyApiTests.dummyUsersApiTest">
+    <configuration name="ChuckNorrisApiTest.ApiJokesValidationTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="BaseTestFramework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.api.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests.api" />
+      <option name="MAIN_CLASS_NAME" value="tests.api.ChuckNorrisApiTest" />
+      <option name="METHOD_NAME" value="ApiJokesValidationTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DummyApiTests.createUserNewTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="BaseTestFramework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dummy_api.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dummy_api" />
+      <option name="MAIN_CLASS_NAME" value="dummy_api.DummyApiTests" />
+      <option name="METHOD_NAME" value="createUserNewTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DummyApiTests.createUserTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="BaseTestFramework" />
       <extension name="coverage">
@@ -87,24 +126,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DummyApiTests.dummieApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="BaseTestFramework" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.api.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests.api" />
-      <option name="MAIN_CLASS_NAME" value="tests.api.DummyApiTests" />
-      <option name="METHOD_NAME" value="dummieApiTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="DummyApiTests.dummyOneUserApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="BaseTestFramework" />
       <extension name="coverage">
@@ -116,24 +137,6 @@
       <option name="PACKAGE_NAME" value="dummy_api" />
       <option name="MAIN_CLASS_NAME" value="dummy_api.DummyApiTests" />
       <option name="METHOD_NAME" value="dummyOneUserApiTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DummyApiTests.dummyUserApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="BaseTestFramework" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="dummy_api.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="dummy_api" />
-      <option name="MAIN_CLASS_NAME" value="dummy_api.DummyApiTests" />
-      <option name="METHOD_NAME" value="dummyUserApiTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -187,20 +190,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="TestNG.DummyApiTests.createUserTest" />
-      <item itemvalue="TestNG.DummyApiTests.dummieApiTest" />
-      <item itemvalue="TestNG.DummyApiTests.dummyOneUserApiTest" />
-      <item itemvalue="TestNG.DummyApiTests.dummyUserApiTest" />
-      <item itemvalue="TestNG.DummyApiTests.dummyUsersApiTest" />
       <item itemvalue="TestNG.LoginTest" />
+      <item itemvalue="TestNG.DummyApiTests.createUserNewTest" />
+      <item itemvalue="TestNG.DummyApiTests.createUserTest" />
+      <item itemvalue="TestNG.DummyApiTests.dummyOneUserApiTest" />
+      <item itemvalue="TestNG.DummyApiTests.dummyUsersApiTest" />
+      <item itemvalue="TestNG.ChuckNorrisApiTest.ApiJokesValidationTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.DummyApiTests.dummyUsersApiTest" />
+        <item itemvalue="TestNG.DummyApiTests.createUserNewTest" />
         <item itemvalue="TestNG.DummyApiTests.createUserTest" />
         <item itemvalue="TestNG.DummyApiTests.dummyOneUserApiTest" />
-        <item itemvalue="TestNG.DummyApiTests.dummyUserApiTest" />
-        <item itemvalue="TestNG.DummyApiTests.dummyUsersApiTest" />
-        <item itemvalue="TestNG.DummyApiTests.dummieApiTest" />
+        <item itemvalue="TestNG.ChuckNorrisApiTest.ApiJokesValidationTest" />
       </list>
     </recent_temporary>
   </component>
@@ -262,49 +265,28 @@
       <option name="project" value="LOCAL" />
       <updated>1690724849824</updated>
     </task>
-    <task id="LOCAL-00008" summary="Initial commit">
-      <created>1695587128616</created>
+    <task id="LOCAL-00008" summary="Api Test">
+      <created>1697232340463</created>
       <option name="number" value="00008" />
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
-      <updated>1695587128616</updated>
+      <updated>1697232340463</updated>
     </task>
-    <task id="LOCAL-00009" summary="tests">
-      <created>1696242028794</created>
+    <task id="LOCAL-00009" summary="Fox of ApiCategoriesValidationTest() Api Test">
+      <created>1697452275353</created>
       <option name="number" value="00009" />
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
-      <updated>1696242028794</updated>
+      <updated>1697452275354</updated>
     </task>
-    <task id="LOCAL-00010" summary="tests">
-      <created>1697405639102</created>
+    <task id="LOCAL-00010" summary="Fox of ApiCategoriesValidationTest() Api Test">
+      <created>1697554613070</created>
       <option name="number" value="00010" />
       <option name="presentableId" value="LOCAL-00010" />
       <option name="project" value="LOCAL" />
-      <updated>1697405639102</updated>
+      <updated>1697554613070</updated>
     </task>
-    <task id="LOCAL-00011" summary="Dummy first test">
-      <created>1698596043460</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1698596043460</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Dummy first test">
-      <created>1698602208749</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1698602208749</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Dummy first test">
-      <created>1698602823337</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1698602823337</updated>
-    </task>
-    <option name="localTasksCounter" value="14" />
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -313,10 +295,26 @@
     <MESSAGE value="Editing pom.xml and TestNG.xml." />
     <MESSAGE value="pom fix" />
     <MESSAGE value="allure-results folder is successfully generated." />
-    <MESSAGE value="Chuck Norris tests" />
     <MESSAGE value="Initial commit" />
-    <MESSAGE value="tests" />
-    <MESSAGE value="Dummy first test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dummy first test" />
+    <MESSAGE value="Chuck Norris tests" />
+    <MESSAGE value="Api Test" />
+    <MESSAGE value="Fox of ApiCategoriesValidationTest() Api Test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fox of ApiCategoriesValidationTest() Api Test" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/dummy_api/DummyApiTests.java</url>
+          <line>113</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/dummy_api/DummyApiTests.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
