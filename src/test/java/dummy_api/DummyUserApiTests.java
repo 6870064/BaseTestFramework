@@ -5,7 +5,6 @@ import io.restassured.http.Method;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import lombok.extern.log4j.Log4j2;
-import org.apache.hc.core5.http.HttpStatus;
 import org.json.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -14,8 +13,6 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Random;
-
-import static io.restassured.RestAssured.given;
 
 @Log4j2
 public class DummyUserApiTests extends BaseDummyTest {
@@ -98,23 +95,13 @@ public class DummyUserApiTests extends BaseDummyTest {
         JSONObject jsonRequestBody = getJSONObjectFromFile("src/test/resources/create_user_payload_request.json");
         jsonRequestBody.put("email", randomEmail);
 
-                Response response = given()
-                .header("app-id", "653e7ecc4cdc863e717a3587")
-                .header("Content-type", "application/json")
-                .and()
-                .body(jsonRequestBody)
-                .when()
-                .post(createUserEndpoint)
-                .then()
-               .statusCode(HttpStatus.SC_OK)
-                .statusCode(200)
-                .log().status()
-                .log().body()
-                .extract().response();
+        RequestSpecification requestSpec = RestAssured.given().headers(send_headers);
+         requestSpec.body(jsonRequestBody.toString());
 
+        Response response = requestSpec.request(Method.POST, createUserEndpoint);
         response.prettyPrint();
         Assert.assertEquals(200, response.statusCode());
-            }
+        }
 
     @Test
     public void updateUserTest() {

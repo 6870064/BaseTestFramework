@@ -29,7 +29,4 @@ public class DummyPostApiTests extends BaseDummyTest {
         response.prettyPrint();
         Assert.assertTrue(response.getStatusCode()==200);
     }
-
-
-
 }
