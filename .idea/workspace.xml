@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a037309-27bc-4d5f-83fe-da076962cb5c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/resources/one_user_data.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/dummy_api/DummyUserApiTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dummy_api/DummyUserApiTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/create_user_payload_request.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/create_user_payload_request.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/update_user_payload_request.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/update_user_payload_request.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,28 +51,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;ignore.preview.features.used&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/dzmitryviachaslavau/Documents/Projects/BaseTestFramework&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "ignore.preview.features.used": "true",
+    "last_opened_file_path": "/Users/dzmitryviachaslavau/Documents/Projects/BaseTestFramework/src/test/resources",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="tests.api" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/test/resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.DummyUserApiTests">
+  <component name="RunManager" selected="TestNG.DummyUserApiTests.updateUserTest">
     <configuration name="DummyUserApiTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="BaseTestFramework" />
       <extension name="coverage">
@@ -103,24 +104,6 @@
       <option name="PACKAGE_NAME" value="dummy_api" />
       <option name="MAIN_CLASS_NAME" value="dummy_api.DummyUserApiTests" />
       <option name="METHOD_NAME" value="createUserNewTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DummyUserApiTests.deleteUserTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="BaseTestFramework" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="dummy_api.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="dummy_api" />
-      <option name="MAIN_CLASS_NAME" value="dummy_api.DummyUserApiTests" />
-      <option name="METHOD_NAME" value="deleteUserTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -164,6 +147,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DummyUserApiTests.updateUserTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="BaseTestFramework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dummy_api.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dummy_api" />
+      <option name="MAIN_CLASS_NAME" value="dummy_api.DummyUserApiTests" />
+      <option name="METHOD_NAME" value="updateUserTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="LoginTest" type="TestNG" nameIsGenerated="true">
       <module name="BaseTestFramework" />
       <shortenClasspath name="NONE" />
@@ -196,16 +197,16 @@
       <item itemvalue="TestNG.DummyUserApiTests" />
       <item itemvalue="TestNG.DummyUserApiTests.dummyGetOneUserApiTest" />
       <item itemvalue="TestNG.DummyUserApiTests.dummyOneUserApiTest" />
+      <item itemvalue="TestNG.DummyUserApiTests.updateUserTest" />
       <item itemvalue="TestNG.DummyUserApiTests.createUserNewTest" />
-      <item itemvalue="TestNG.DummyUserApiTests.deleteUserTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.DummyUserApiTests.updateUserTest" />
         <item itemvalue="TestNG.DummyUserApiTests" />
         <item itemvalue="TestNG.DummyUserApiTests.dummyGetOneUserApiTest" />
         <item itemvalue="TestNG.DummyUserApiTests.dummyOneUserApiTest" />
         <item itemvalue="TestNG.DummyUserApiTests.createUserNewTest" />
-        <item itemvalue="TestNG.DummyUserApiTests.deleteUserTest" />
       </list>
     </recent_temporary>
   </component>
@@ -323,7 +324,14 @@
       <option name="project" value="LOCAL" />
       <updated>1699226081906</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Fix of all DummyUserApiTests.">
+      <created>1699478941858</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1699478941858</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -337,6 +345,7 @@
     <MESSAGE value="tests" />
     <MESSAGE value="Dummy first test" />
     <MESSAGE value="User and Post Api tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="User and Post Api tests" />
+    <MESSAGE value="Fix of all DummyUserApiTests." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix of all DummyUserApiTests." />
   </component>
 </project>

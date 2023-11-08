@@ -40,7 +40,7 @@ public class DummyUserApiTests extends BaseDummyTest {
         Assert.assertEquals(200, response.statusCode());
         JSONObject jsonUserData = getJSONObjectFromFile("src/test/resources/one_user_data.json");
 
-        //TODO уточнить, как забирать данные с location.
+        //TODO уточнить, как забирать данные с location. Сейчас забирается с отдельного JSON с данными по локации.
         JSONObject locationJson = getJSONObjectFromFile("src/test/resources/one_user_data_location.json");
 
         Assert.assertEquals(response.jsonPath().getString("id"), jsonUserData.get("id"));
@@ -72,6 +72,7 @@ public class DummyUserApiTests extends BaseDummyTest {
         response.prettyPrint();
         Assert.assertEquals(200, response.statusCode());
         Assert.assertEquals(response.statusCode(),200);
+        Assert.assertEquals(response.jsonPath().getString("mr"), jsonRequestBody.get("mr"));
         Assert.assertEquals(response.jsonPath().getString("firstName"),jsonRequestBody.get("firstName"));
         Assert.assertEquals(response.jsonPath().getString("lastName"), jsonRequestBody.get("lastName"));
         Assert.assertEquals(response.jsonPath().getString("gender"), jsonRequestBody.get("gender"));
@@ -93,24 +94,24 @@ public class DummyUserApiTests extends BaseDummyTest {
         createUserResponse.prettyPrint();
         Assert.assertEquals(200, createUserResponse.statusCode());
 
-        String updateUserEndpoint = "/user/" + createUserResponse.jsonPath().getString("id");
-
         JSONObject jsonUpdateRequestBody = getJSONObjectFromFile("src/test/resources/update_user_payload_request.json");
         jsonUpdateRequestBody.put("email", randomEmail);
 
+        String updateUserEndpoint = "/user/" + createUserResponse.jsonPath().getString("id");
         RequestSpecification requestSpec2 = RestAssured.given().headers(send_headers);
+        requestSpec2.body(jsonUpdateRequestBody.toString());
         Response updateUserResponse = requestSpec2.request(Method.PUT, updateUserEndpoint);
         updateUserResponse.prettyPrint();
 
         Assert.assertTrue(updateUserResponse.getStatusCode()==200);
         Assert.assertEquals(200, updateUserResponse.statusCode());
-        Assert.assertEquals(createUserResponse.jsonPath().getString("id"), updateUserResponse.jsonPath().getString("id"));
-        Assert.assertEquals(updateUserResponse.jsonPath().getString("title"),updateUserResponse.jsonPath().getString("title"));
-        Assert.assertEquals(updateUserResponse.jsonPath().getString("firstName"),updateUserResponse.jsonPath().getString("firstName"));
-        Assert.assertEquals(updateUserResponse.jsonPath().getString("lastName"), updateUserResponse.jsonPath().getString("lastName"));
-        Assert.assertEquals(updateUserResponse.jsonPath().getString("gender"),updateUserResponse.jsonPath().getString("gender"));
+        Assert.assertEquals(updateUserResponse.jsonPath().getString("id"), createUserResponse.jsonPath().getString("id"));
+        Assert.assertEquals(updateUserResponse.jsonPath().getString("title"),jsonUpdateRequestBody.get("title"));
+        Assert.assertEquals(updateUserResponse.jsonPath().getString("firstName"),jsonUpdateRequestBody.get("firstName"));
+        Assert.assertEquals(updateUserResponse.jsonPath().getString("lastName"), jsonUpdateRequestBody.get("lastName"));;
+        Assert.assertEquals(updateUserResponse.jsonPath().getString("gender"),jsonUpdateRequestBody.get("gender"));
         Assert.assertEquals(updateUserResponse.jsonPath().getString("email"), randomEmail.toLowerCase());
-        Assert.assertEquals(updateUserResponse.jsonPath().getString("dateOfBirth"),updateUserResponse.jsonPath().getString("dateOfBirth"));
+        Assert.assertEquals(updateUserResponse.jsonPath().getString("dateOfBirth"),jsonUpdateRequestBody.get("dateOfBirth"));
     }
 
     @Test
