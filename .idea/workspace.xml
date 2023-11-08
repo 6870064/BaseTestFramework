@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a037309-27bc-4d5f-83fe-da076962cb5c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/dummy_api/DummyUserApiTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dummy_api/DummyUserApiTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/update_user_payload_request.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/update_user_payload_request.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +73,7 @@
       <recent name="$PROJECT_DIR$/src/test/resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.DummyUserApiTests.updateUserTest">
+  <component name="RunManager" selected="TestNG.DummyUserApiTests">
     <configuration name="DummyUserApiTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="BaseTestFramework" />
       <extension name="coverage">
@@ -202,11 +200,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.DummyUserApiTests.updateUserTest" />
         <item itemvalue="TestNG.DummyUserApiTests" />
+        <item itemvalue="TestNG.DummyUserApiTests.createUserNewTest" />
+        <item itemvalue="TestNG.DummyUserApiTests.updateUserTest" />
         <item itemvalue="TestNG.DummyUserApiTests.dummyGetOneUserApiTest" />
         <item itemvalue="TestNG.DummyUserApiTests.dummyOneUserApiTest" />
-        <item itemvalue="TestNG.DummyUserApiTests.createUserNewTest" />
       </list>
     </recent_temporary>
   </component>
@@ -331,7 +329,14 @@
       <option name="project" value="LOCAL" />
       <updated>1699478941858</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Fix of updateUserTest.">
+      <created>1699479914982</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1699479914982</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -346,6 +351,7 @@
     <MESSAGE value="Dummy first test" />
     <MESSAGE value="User and Post Api tests" />
     <MESSAGE value="Fix of all DummyUserApiTests." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix of all DummyUserApiTests." />
+    <MESSAGE value="Fix of updateUserTest." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix of updateUserTest." />
   </component>
 </project>

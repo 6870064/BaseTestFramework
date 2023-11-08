@@ -72,7 +72,7 @@ public class DummyUserApiTests extends BaseDummyTest {
         response.prettyPrint();
         Assert.assertEquals(200, response.statusCode());
         Assert.assertEquals(response.statusCode(),200);
-        Assert.assertEquals(response.jsonPath().getString("mr"), jsonRequestBody.get("mr"));
+        Assert.assertEquals(response.jsonPath().getString("title"), jsonRequestBody.get("title"));
         Assert.assertEquals(response.jsonPath().getString("firstName"),jsonRequestBody.get("firstName"));
         Assert.assertEquals(response.jsonPath().getString("lastName"), jsonRequestBody.get("lastName"));
         Assert.assertEquals(response.jsonPath().getString("gender"), jsonRequestBody.get("gender"));
@@ -83,26 +83,32 @@ public class DummyUserApiTests extends BaseDummyTest {
     @Test
     public void updateUserTest() {
 
+        //Получение данных для создания пользователя
         String randomEmail = "test" +getRandomValue(5)+ "@gmail.com";
         JSONObject jsonRequestBody = getJSONObjectFromFile("src/test/resources/create_user_payload_request.json");
         jsonRequestBody.put("email", randomEmail);
 
+
         RequestSpecification requestSpec = RestAssured.given().headers(send_headers);
         requestSpec.body(jsonRequestBody.toString());
 
-        Response createUserResponse = requestSpec.request(Method.POST, createUserEndpoint);
+        Response createUserResponse = requestSpec.request(Method.POST, createUserEndpoint); //получение респонса
         createUserResponse.prettyPrint();
-        Assert.assertEquals(200, createUserResponse.statusCode());
+        Assert.assertEquals(200, createUserResponse.statusCode()); //проверка респонса на 200 статус
 
+        //Получение данных для обновления пользователя
         JSONObject jsonUpdateRequestBody = getJSONObjectFromFile("src/test/resources/update_user_payload_request.json");
         jsonUpdateRequestBody.put("email", randomEmail);
 
+        //создание endpoint для обновления пользователя
         String updateUserEndpoint = "/user/" + createUserResponse.jsonPath().getString("id");
         RequestSpecification requestSpec2 = RestAssured.given().headers(send_headers);
+
         requestSpec2.body(jsonUpdateRequestBody.toString());
-        Response updateUserResponse = requestSpec2.request(Method.PUT, updateUserEndpoint);
+        Response updateUserResponse = requestSpec2.request(Method.PUT, updateUserEndpoint); //получение респонса
         updateUserResponse.prettyPrint();
 
+        //Проверка ответа на 200 статус и эквивалентность данных с репонса с данными обновленного пользователя
         Assert.assertTrue(updateUserResponse.getStatusCode()==200);
         Assert.assertEquals(200, updateUserResponse.statusCode());
         Assert.assertEquals(updateUserResponse.jsonPath().getString("id"), createUserResponse.jsonPath().getString("id"));
