@@ -106,13 +106,22 @@ public class DummyUserApiTests extends BaseDummyTest {
     @Test
     public void updateUserTest() {
 
-        RequestSpecification requestSpec = RestAssured.given().headers(send_headers).and().body(requestBody);
+        JSONObject jsonRequestBody = getJSONObjectFromFile("src/test/resources/create_user_payload_request.json");
+        jsonRequestBody.put("email", randomEmail);
+
+        RequestSpecification requestSpec = RestAssured.given().headers(send_headers);
+        requestSpec.body(jsonRequestBody.toString());
+
         Response createUserResponse = requestSpec.request(Method.POST, createUserEndpoint);
         createUserResponse.prettyPrint();
+        Assert.assertEquals(200, createUserResponse.statusCode());
 
         String updateUserEndpoint = "/user/" + createUserResponse.jsonPath().getString("id");
 
-        RequestSpecification requestSpec2 = RestAssured.given().headers(send_headers).and().body(updateRequestBody);
+        JSONObject jsonUpdateRequestBody = getJSONObjectFromFile("src/test/resources/update_user_payload_request.json");
+        jsonUpdateRequestBody.put("email", randomEmail);
+
+        RequestSpecification requestSpec2 = RestAssured.given().headers(send_headers);
         Response updateUserResponse = requestSpec2.request(Method.PUT, updateUserEndpoint);
         updateUserResponse.prettyPrint();
 
