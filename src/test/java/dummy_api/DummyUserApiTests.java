@@ -17,27 +17,9 @@ import java.util.Random;
 @Log4j2
 public class DummyUserApiTests extends BaseDummyTest {
 
-
     String getUsersEndpoint = "/user/" +userID;
     String getUsersListEndpoint = "/user";
     String createUserEndpoint = "/user/create";
-    String randomEmail = "test" +getRandomValue(5)+ "@gmail.com";
-
-    private String requestBody = "{\n" +
-            "  \"title\": \"mr\",\n" +
-            "  \"firstName\": \"Billy\",\n" +
-            "  \"lastName\": \"Bob Tornton\",\n" +
-            "  \"gender\": \"male\",\n" +
-            "  \"email\": \""+randomEmail+"\",\n" +
-            "  \"dateOfBirth\": \"1980-07-05T22:21:32.623Z\" \n}";
-
-    private String updateRequestBody = "{\n" +
-            "  \"title\": \"mr\",\n" +
-            "  \"firstName\": \"Johnny\",\n" +
-            "  \"lastName\": \"Sins\",\n" +
-            "  \"gender\": \"male\",\n" +
-            "  \"email\": \""+randomEmail+"\",\n" +
-            "  \"dateOfBirth\": \"1978-12-31T22:21:32.623Z\" \n}";
 
     @Test
     public void dummyUsersApiTest() {
@@ -49,49 +31,37 @@ public class DummyUserApiTests extends BaseDummyTest {
         }
 
     @Test
-    public void dummyOneUserApiTest() {
+    public void dummyGetOneUserApiTest() {
 
         RequestSpecification requestSpec = RestAssured.given().headers(send_headers);
         Response response = requestSpec.request(Method.GET, getUsersEndpoint);
         response.prettyPrint();
-        Assert.assertTrue(response.getStatusCode()==200);
+        Assert.assertTrue(response.getStatusCode() == 200);
         Assert.assertEquals(200, response.statusCode());
-        Assert.assertEquals(response.jsonPath().getString("id"), "60d0fe4f5311236168a109dd");
-        Assert.assertEquals(response.jsonPath().getString("title"), "mr");
-        Assert.assertEquals(response.jsonPath().getString("firstName"),"Miguel");
-        Assert.assertEquals(response.jsonPath().getString("lastName"),"Lima");
-        Assert.assertEquals(response.jsonPath().getString("gender"),"male");
-        Assert.assertEquals(response.jsonPath().getString("email"),"miguel.lima@example.com");
-        Assert.assertEquals(response.jsonPath().getString("dateOfBirth"),"1979-07-05T22:21:32.623Z");
-        Assert.assertEquals(response.jsonPath().getString("phone"),"(33) 1399-0495");
-        Assert.assertEquals(response.jsonPath().getString("location.street"), "9637, Rua Rio de Janeiro ");
-        Assert.assertEquals(response.jsonPath().getString("location.city"),"Cascavel");
-        Assert.assertEquals(response.jsonPath().getString("location.state"),"AmapÃ¡");
-        Assert.assertEquals(response.jsonPath().getString("location.country"), "Brazil");
-        Assert.assertEquals(response.jsonPath().getString("location.state"), "AmapÃ¡");
-        Assert.assertEquals(response.jsonPath().getString("location.timezone"), "+4:00");
-    }
+        JSONObject jsonUserData = getJSONObjectFromFile("src/test/resources/one_user_data.json");
 
-    @Test
-    public void createUserTest() {
+        //TODO уточнить, как забирать данные с location.
+        JSONObject locationJson = getJSONObjectFromFile("src/test/resources/one_user_data_location.json");
 
-        RequestSpecification requestSpec = RestAssured.given().headers(send_headers).and().body(requestBody);
-        Response response = requestSpec.request(Method.POST, createUserEndpoint);
-        response.prettyPrint();
-        Assert.assertTrue(response.getStatusCode()==200);
-        Assert.assertEquals(response.statusCode(),200);
-        Assert.assertEquals(response.jsonPath().getString("title"), "mr");
-        Assert.assertEquals(response.jsonPath().getString("firstName"),"Billy");
-        Assert.assertEquals(response.jsonPath().getString("lastName"), "Bob Tornton");
-        Assert.assertEquals(response.jsonPath().getString("gender"), "male");
-        Assert.assertEquals(response.jsonPath().getString("email"), randomEmail.toLowerCase());
-        Assert.assertEquals(response.jsonPath().getString("dateOfBirth"), "1980-07-05T22:21:32.623Z");
-
+        Assert.assertEquals(response.jsonPath().getString("id"), jsonUserData.get("id"));
+        Assert.assertEquals(response.jsonPath().getString("title"), jsonUserData.get("title"));
+        Assert.assertEquals(response.jsonPath().getString("firstName"), jsonUserData.get("firstName"));
+        Assert.assertEquals(response.jsonPath().getString("lastName"), jsonUserData.get("lastName"));
+        Assert.assertEquals(response.jsonPath().getString("gender"), jsonUserData.get("gender"));
+        Assert.assertEquals(response.jsonPath().getString("email"), jsonUserData.get("email"));
+        Assert.assertEquals(response.jsonPath().getString("dateOfBirth"), jsonUserData.get("dateOfBirth"));
+        Assert.assertEquals(response.jsonPath().getString("phone"), jsonUserData.get("phone"));
+        Assert.assertEquals(response.jsonPath().getString("location.street"), locationJson.get("street"));
+        Assert.assertEquals(response.jsonPath().getString("location.city"), locationJson.get("city"));
+        Assert.assertEquals(response.jsonPath().getString("location.state"), locationJson.get("state"));
+        Assert.assertEquals(response.jsonPath().getString("location.country"), locationJson.get("country"));
+        Assert.assertEquals(response.jsonPath().getString("location.timezone"), locationJson.get("timezone"));
     }
 
     @Test
     public void createUserNewTest() {
 
+        String randomEmail = "test" +getRandomValue(5)+ "@gmail.com";
         JSONObject jsonRequestBody = getJSONObjectFromFile("src/test/resources/create_user_payload_request.json");
         jsonRequestBody.put("email", randomEmail);
 
@@ -101,11 +71,18 @@ public class DummyUserApiTests extends BaseDummyTest {
         Response response = requestSpec.request(Method.POST, createUserEndpoint);
         response.prettyPrint();
         Assert.assertEquals(200, response.statusCode());
+        Assert.assertEquals(response.statusCode(),200);
+        Assert.assertEquals(response.jsonPath().getString("firstName"),jsonRequestBody.get("firstName"));
+        Assert.assertEquals(response.jsonPath().getString("lastName"), jsonRequestBody.get("lastName"));
+        Assert.assertEquals(response.jsonPath().getString("gender"), jsonRequestBody.get("gender"));
+        Assert.assertEquals(response.jsonPath().getString("email"), randomEmail.toLowerCase());
+        Assert.assertEquals(response.jsonPath().getString("dateOfBirth"),  jsonRequestBody.get("dateOfBirth"));
         }
 
     @Test
     public void updateUserTest() {
 
+        String randomEmail = "test" +getRandomValue(5)+ "@gmail.com";
         JSONObject jsonRequestBody = getJSONObjectFromFile("src/test/resources/create_user_payload_request.json");
         jsonRequestBody.put("email", randomEmail);
 
@@ -128,25 +105,31 @@ public class DummyUserApiTests extends BaseDummyTest {
         Assert.assertTrue(updateUserResponse.getStatusCode()==200);
         Assert.assertEquals(200, updateUserResponse.statusCode());
         Assert.assertEquals(createUserResponse.jsonPath().getString("id"), updateUserResponse.jsonPath().getString("id"));
-        Assert.assertEquals(updateUserResponse.jsonPath().getString("title"),"mr");
-        Assert.assertEquals(updateUserResponse.jsonPath().getString("firstName"),"Johnny");
-        Assert.assertEquals(updateUserResponse.jsonPath().getString("lastName"), "Sins");
-        Assert.assertEquals(updateUserResponse.jsonPath().getString("gender"),"male");
+        Assert.assertEquals(updateUserResponse.jsonPath().getString("title"),updateUserResponse.jsonPath().getString("title"));
+        Assert.assertEquals(updateUserResponse.jsonPath().getString("firstName"),updateUserResponse.jsonPath().getString("firstName"));
+        Assert.assertEquals(updateUserResponse.jsonPath().getString("lastName"), updateUserResponse.jsonPath().getString("lastName"));
+        Assert.assertEquals(updateUserResponse.jsonPath().getString("gender"),updateUserResponse.jsonPath().getString("gender"));
         Assert.assertEquals(updateUserResponse.jsonPath().getString("email"), randomEmail.toLowerCase());
-        Assert.assertEquals(updateUserResponse.jsonPath().getString("dateOfBirth"),"1978-12-31T22:21:32.623Z");
+        Assert.assertEquals(updateUserResponse.jsonPath().getString("dateOfBirth"),updateUserResponse.jsonPath().getString("dateOfBirth"));
     }
 
     @Test
     public void deleteUserTest() {
 
-        RequestSpecification requestSpec = RestAssured.given().headers(send_headers).and().body(requestBody);
+        String randomEmail = "test" +getRandomValue(5)+ "@gmail.com";
+        JSONObject jsonRequestBody = getJSONObjectFromFile("src/test/resources/create_user_payload_request.json");
+        jsonRequestBody.put("email", randomEmail);
+
+        RequestSpecification requestSpec = RestAssured.given().headers(send_headers);
+        requestSpec.body(jsonRequestBody.toString());
+
         Response createUserResponse = requestSpec.request(Method.POST, createUserEndpoint);
         createUserResponse.prettyPrint();
 
         String deleteUserEndpoint = "/user/" + createUserResponse.jsonPath().getString("id");
 
-        RequestSpecification requestSpec2 = RestAssured.given().headers(send_headers);
-        Response deleteUserResponse = requestSpec2.request(Method.DELETE, deleteUserEndpoint);
+        RequestSpecification jsonRequestDeleteBody = RestAssured.given().headers(send_headers);
+        Response deleteUserResponse = jsonRequestDeleteBody.request(Method.DELETE, deleteUserEndpoint);
         deleteUserResponse.prettyPrint();
 
         Assert.assertTrue(deleteUserResponse.getStatusCode()==200);

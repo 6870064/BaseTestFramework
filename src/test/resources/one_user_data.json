@@ -1,0 +1,20 @@
+{
+  "id": "60d0fe4f5311236168a109dd",
+  "title": "mr",
+  "firstName": "Miguel",
+  "lastName": "Lima",
+  "picture": "https://randomuser.me/api/portraits/med/men/31.jpg",
+  "gender": "male",
+  "email": "miguel.lima@example.com",
+  "dateOfBirth": "1979-07-05T22:21:32.623Z",
+  "phone": "(33) 1399-0495",
+  "location": {
+    "street": "9637, Rua Rio de Janeiro ",
+    "city": "Cascavel",
+    "state": "AmapÃ¡",
+    "country": "Brazil",
+    "timezone": "+4:00"
+  },
+  "registerDate": "2021-06-21T21:02:10.647Z",
+  "updatedDate": "2021-06-21T21:02:10.647Z"
+}
