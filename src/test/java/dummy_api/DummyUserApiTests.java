@@ -38,10 +38,10 @@ public class DummyUserApiTests extends BaseDummyTest {
         response.prettyPrint();
         Assert.assertTrue(response.getStatusCode() == 200);
         Assert.assertEquals(200, response.statusCode());
-        JSONObject jsonUserData = getJSONObjectFromFile("src/test/resources/one_user_data.json");
+        JSONObject jsonUserData = getJSONObjectFromFile("src/test/resources/json_files/one_user_data.json");
 
         //TODO уточнить, как забирать данные с location. Сейчас забирается с отдельного JSON с данными по локации.
-        JSONObject locationJson = getJSONObjectFromFile("src/test/resources/one_user_data_location.json");
+        JSONObject locationJson = getJSONObjectFromFile("src/test/resources/json_files/one_user_data_location.json");
 
         Assert.assertEquals(response.jsonPath().getString("id"), jsonUserData.get("id"));
         Assert.assertEquals(response.jsonPath().getString("title"), jsonUserData.get("title"));
@@ -62,7 +62,7 @@ public class DummyUserApiTests extends BaseDummyTest {
     public void createUserNewTest() {
 
         String randomEmail = "test" +getRandomValue(5)+ "@gmail.com";
-        JSONObject jsonRequestBody = getJSONObjectFromFile("src/test/resources/create_user_payload_request.json");
+        JSONObject jsonRequestBody = getJSONObjectFromFile("src/test/resources/json_files/create_user_payload_request.json");
         jsonRequestBody.put("email", randomEmail);
 
         RequestSpecification requestSpec = RestAssured.given().headers(send_headers);
@@ -85,7 +85,7 @@ public class DummyUserApiTests extends BaseDummyTest {
 
         //Получение данных для создания пользователя
         String randomEmail = "test" +getRandomValue(5)+ "@gmail.com";
-        JSONObject jsonRequestBody = getJSONObjectFromFile("src/test/resources/create_user_payload_request.json");
+        JSONObject jsonRequestBody = getJSONObjectFromFile("src/test/resources/json_files/create_user_payload_request.json");
         jsonRequestBody.put("email", randomEmail);
 
 
@@ -97,7 +97,7 @@ public class DummyUserApiTests extends BaseDummyTest {
         Assert.assertEquals(200, createUserResponse.statusCode()); //проверка респонса на 200 статус
 
         //Получение данных для обновления пользователя
-        JSONObject jsonUpdateRequestBody = getJSONObjectFromFile("src/test/resources/update_user_payload_request.json");
+        JSONObject jsonUpdateRequestBody = getJSONObjectFromFile("src/test/resources/json_files/update_user_payload_request.json");
         jsonUpdateRequestBody.put("email", randomEmail);
 
         //создание endpoint для обновления пользователя
@@ -124,7 +124,7 @@ public class DummyUserApiTests extends BaseDummyTest {
     public void deleteUserTest() {
 
         String randomEmail = "test" +getRandomValue(5)+ "@gmail.com";
-        JSONObject jsonRequestBody = getJSONObjectFromFile("src/test/resources/create_user_payload_request.json");
+        JSONObject jsonRequestBody = getJSONObjectFromFile("src/test/resources/json_files/create_user_payload_request.json");
         jsonRequestBody.put("email", randomEmail);
 
         RequestSpecification requestSpec = RestAssured.given().headers(send_headers);
