@@ -1,6 +1,5 @@
 package dummy_api;
 
-import io.restassured.RestAssured;
 import io.restassured.http.Method;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
@@ -9,10 +8,7 @@ import org.json.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.Random;
+import static io.restassured.RestAssured.given;
 
 @Log4j2
 public class DummyUserApiTests extends BaseDummyTest {
@@ -24,7 +20,7 @@ public class DummyUserApiTests extends BaseDummyTest {
     @Test
     public void dummyUsersApiTest() {
 
-        RequestSpecification requestSpec = RestAssured.given().headers(send_headers);
+        RequestSpecification requestSpec = given().headers(send_headers);
         Response response = requestSpec.request(Method.GET, getUsersListEndpoint);
         response.prettyPrint();
         Assert.assertTrue(response.getStatusCode()==200);
@@ -33,12 +29,13 @@ public class DummyUserApiTests extends BaseDummyTest {
     @Test
     public void dummyGetOneUserApiTest() {
 
-        RequestSpecification requestSpec = RestAssured.given().headers(send_headers);
+        RequestSpecification requestSpec = given().headers(send_headers);
         Response response = requestSpec.request(Method.GET, getUsersEndpoint);
         response.prettyPrint();
         Assert.assertTrue(response.getStatusCode() == 200);
         Assert.assertEquals(200, response.statusCode());
         JSONObject jsonUserData = getJSONObjectFromFile("src/test/resources/json_files/one_user_data.json");
+        JSONObject jsonSchema = getJSONObjectFromFile("src/test/resources/schemas/User_schema.json");
 
         //TODO уточнить, как забирать данные с location. Сейчас забирается с отдельного JSON с данными по локации.
         JSONObject locationJson = getJSONObjectFromFile("src/test/resources/json_files/one_user_data_location.json");
@@ -56,6 +53,7 @@ public class DummyUserApiTests extends BaseDummyTest {
         Assert.assertEquals(response.jsonPath().getString("location.state"), locationJson.get("state"));
         Assert.assertEquals(response.jsonPath().getString("location.country"), locationJson.get("country"));
         Assert.assertEquals(response.jsonPath().getString("location.timezone"), locationJson.get("timezone"));
+        Assert.assertEquals(checkJSONSchema(response, "src/test/resources/json_files/one_user_data_location.json"), true);
     }
 
     @Test
@@ -65,7 +63,7 @@ public class DummyUserApiTests extends BaseDummyTest {
         JSONObject jsonRequestBody = getJSONObjectFromFile("src/test/resources/json_files/create_user_payload_request.json");
         jsonRequestBody.put("email", randomEmail);
 
-        RequestSpecification requestSpec = RestAssured.given().headers(send_headers);
+        RequestSpecification requestSpec = given().headers(send_headers);
          requestSpec.body(jsonRequestBody.toString());
 
         Response response = requestSpec.request(Method.POST, createUserEndpoint);
@@ -89,7 +87,7 @@ public class DummyUserApiTests extends BaseDummyTest {
         jsonRequestBody.put("email", randomEmail);
 
 
-        RequestSpecification requestSpec = RestAssured.given().headers(send_headers);
+        RequestSpecification requestSpec = given().headers(send_headers);
         requestSpec.body(jsonRequestBody.toString());
 
         Response createUserResponse = requestSpec.request(Method.POST, createUserEndpoint); //получение респонса
@@ -102,7 +100,7 @@ public class DummyUserApiTests extends BaseDummyTest {
 
         //создание endpoint для обновления пользователя
         String updateUserEndpoint = "/user/" + createUserResponse.jsonPath().getString("id");
-        RequestSpecification requestSpec2 = RestAssured.given().headers(send_headers);
+        RequestSpecification requestSpec2 = given().headers(send_headers);
 
         requestSpec2.body(jsonUpdateRequestBody.toString());
         Response updateUserResponse = requestSpec2.request(Method.PUT, updateUserEndpoint); //получение респонса
@@ -127,7 +125,7 @@ public class DummyUserApiTests extends BaseDummyTest {
         JSONObject jsonRequestBody = getJSONObjectFromFile("src/test/resources/json_files/create_user_payload_request.json");
         jsonRequestBody.put("email", randomEmail);
 
-        RequestSpecification requestSpec = RestAssured.given().headers(send_headers);
+        RequestSpecification requestSpec = given().headers(send_headers);
         requestSpec.body(jsonRequestBody.toString());
 
         Response createUserResponse = requestSpec.request(Method.POST, createUserEndpoint);
@@ -135,33 +133,12 @@ public class DummyUserApiTests extends BaseDummyTest {
 
         String deleteUserEndpoint = "/user/" + createUserResponse.jsonPath().getString("id");
 
-        RequestSpecification jsonRequestDeleteBody = RestAssured.given().headers(send_headers);
+        RequestSpecification jsonRequestDeleteBody = given().headers(send_headers);
         Response deleteUserResponse = jsonRequestDeleteBody.request(Method.DELETE, deleteUserEndpoint);
         deleteUserResponse.prettyPrint();
 
         Assert.assertTrue(deleteUserResponse.getStatusCode()==200);
         Assert.assertEquals(200, deleteUserResponse.statusCode());
         Assert.assertEquals(deleteUserResponse.jsonPath().getString("id"), createUserResponse.jsonPath().getString("id"));
-    }
-
-    public static String getRandomValue(int length) {
-        String charset = "0123456789";
-        StringBuilder randomString = new StringBuilder();
-
-        for (int i = 0; i < length; i++) {
-            int randomIndex = new Random().nextInt(charset.length());
-            char randomChar = charset.charAt(randomIndex);
-            randomString.append(randomChar);
-        }
-        return randomString.toString();
-    }
-
-    public static JSONObject getJSONObjectFromFile(String filePath) {
-        try {
-            String jsonContent = new String(Files.readAllBytes(Paths.get(filePath)));
-            return new JSONObject(jsonContent);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
     }
 }

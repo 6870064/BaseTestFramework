@@ -1,0 +1,11 @@
+{
+  "text": "Text of the post for testing, bla bla bla",
+  "image": "https://randomuser.me/api/portraits/med/men/31.jpg",
+  "likes": 28,
+  "tags": [
+    "plant",
+    "tree",
+    "dog"
+  ],
+  "owner": "60d0fe4f5311236168a109dd"
+}
