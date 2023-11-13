@@ -1,0 +1,10 @@
+{
+    "text": "New Text of the post for updating, bla bla bla",
+    "image": "https://randomuser.me/api/posts/555.jpg",
+    "likes": 28,
+    "tags": [
+        "nature",
+        "it",
+        "cat"
+    ]
+}
