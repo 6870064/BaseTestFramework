@@ -118,9 +118,33 @@ public class DummyPostApiTests extends BaseDummyTest {
         //TODO доделать валидацию tags
     }
 
+    @Test
+    public void deletePostApiTest() {
+        //подготовка реквеста на создание пользователя
+        String randomLikesInt = getRandomValue(1);
+        JSONObject jsonCreateUserRequestBody = getJSONObjectFromFile("src/test/resources/json_files/create_post_payload_request.json");
+        jsonCreateUserRequestBody.put("likes", randomLikesInt);
 
+        //отправка запроса на создание пользователя
+        RequestSpecification requestSpecification = RestAssured.given().headers(send_headers);
+        requestSpecification.body(jsonCreateUserRequestBody.toString());
 
+        //получение респонса
+        Response createPostResponse = requestSpecification.request(Method.POST, createPostEndpoint);
+        createPostResponse.prettyPrint();
 
+        //создание endpoint для удаления пользователя
+        String deletePostEndpoint = "/post/" + createPostResponse.jsonPath().getString("id");
 
+        RequestSpecification jsonRequestDeleteBody = given().headers(send_headers);
+        Response deletePostResponse = jsonRequestDeleteBody.request(Method.DELETE, deletePostEndpoint);
+        deletePostResponse.prettyPrint();
 
+        // Валидация данных после удаления поста
+        Assert.assertTrue(deletePostResponse.getStatusCode()==200);
+        Assert.assertEquals(200, deletePostResponse.statusCode());
+        Assert.assertEquals(deletePostResponse.jsonPath().getString("id"), createPostResponse.jsonPath().getString("id"));
+    }
 }
+
+

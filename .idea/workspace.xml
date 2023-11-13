@@ -75,7 +75,7 @@
       <recent name="$PROJECT_DIR$/src/test/resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.DummyPostApiTests.updatePostApiTest">
+  <component name="RunManager" selected="TestNG.DummyPostApiTests.deletePostApiTest">
     <configuration name="DummyPostApiTests.create22PostApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="BaseTestFramework" />
       <extension name="coverage">
@@ -112,7 +112,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DummyPostApiTests.dummyPostsListsApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="DummyPostApiTests.deletePostApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="BaseTestFramework" />
       <extension name="coverage">
         <pattern>
@@ -122,7 +122,25 @@
       </extension>
       <option name="PACKAGE_NAME" value="dummy_api" />
       <option name="MAIN_CLASS_NAME" value="dummy_api.DummyPostApiTests" />
-      <option name="METHOD_NAME" value="dummyPostsListsApiTest" />
+      <option name="METHOD_NAME" value="deletePostApiTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DummyPostApiTests.dummyPostsApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="BaseTestFramework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dummy_api.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dummy_api" />
+      <option name="MAIN_CLASS_NAME" value="dummy_api.DummyPostApiTests" />
+      <option name="METHOD_NAME" value="dummyPostsApiTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -141,24 +159,6 @@
       <option name="PACKAGE_NAME" value="dummy_api" />
       <option name="MAIN_CLASS_NAME" value="dummy_api.DummyPostApiTests" />
       <option name="METHOD_NAME" value="updatePostApiTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DummyUserApiTests.dummyGetOneUserApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="BaseTestFramework" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="dummy_api.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="dummy_api" />
-      <option name="MAIN_CLASS_NAME" value="dummy_api.DummyUserApiTests" />
-      <option name="METHOD_NAME" value="dummyGetOneUserApiTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -197,17 +197,17 @@
       <item itemvalue="TestNG.LoginTest" />
       <item itemvalue="TestNG.DummyPostApiTests.create22PostApiTest" />
       <item itemvalue="TestNG.DummyPostApiTests.createPostApiTest" />
-      <item itemvalue="TestNG.DummyPostApiTests.dummyPostsListsApiTest" />
+      <item itemvalue="TestNG.DummyPostApiTests.deletePostApiTest" />
+      <item itemvalue="TestNG.DummyPostApiTests.dummyPostsApiTest" />
       <item itemvalue="TestNG.DummyPostApiTests.updatePostApiTest" />
-      <item itemvalue="TestNG.DummyUserApiTests.dummyGetOneUserApiTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.DummyPostApiTests.deletePostApiTest" />
+        <item itemvalue="TestNG.DummyPostApiTests.dummyPostsApiTest" />
         <item itemvalue="TestNG.DummyPostApiTests.updatePostApiTest" />
         <item itemvalue="TestNG.DummyPostApiTests.createPostApiTest" />
         <item itemvalue="TestNG.DummyPostApiTests.create22PostApiTest" />
-        <item itemvalue="TestNG.DummyPostApiTests.dummyPostsListsApiTest" />
-        <item itemvalue="TestNG.DummyUserApiTests.dummyGetOneUserApiTest" />
       </list>
     </recent_temporary>
   </component>
@@ -367,7 +367,14 @@
       <option name="project" value="LOCAL" />
       <updated>1699891165067</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="adding // comments in tests">
+      <created>1699891516558</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1699891516558</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -387,6 +394,7 @@
     <MESSAGE value="adding a folder &quot;json_files&quot; for json" />
     <MESSAGE value="Create Post Test doesn't work" />
     <MESSAGE value="Fix of createPostApiTest()&#10;Created working updatePostApiTest()" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix of createPostApiTest()&#10;Created working updatePostApiTest()" />
+    <MESSAGE value="adding // comments in tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding // comments in tests" />
   </component>
 </project>
