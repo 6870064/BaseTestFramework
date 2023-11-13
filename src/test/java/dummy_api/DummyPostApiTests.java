@@ -19,7 +19,7 @@ public class DummyPostApiTests extends BaseDummyTest {
     String getPostByIdEndpoint = "/post/" + postId;
 
 
-    @Test (testName = "Get List test")
+    @Test (testName = "Get List API test")
     public void dummyPostsApiTest() {
 
         RequestSpecification requestSpec = RestAssured.given().headers(send_headers);
@@ -28,7 +28,7 @@ public class DummyPostApiTests extends BaseDummyTest {
         Assert.assertTrue(response.getStatusCode()==200);
     }
 
-    @Test (testName = "Get List By User")
+    @Test (testName = "Get List By User API Test")
     public void dummyPostsListsApiTest() {
 
         RequestSpecification requestSpec = RestAssured.given().headers(send_headers);
@@ -37,23 +37,26 @@ public class DummyPostApiTests extends BaseDummyTest {
         Assert.assertTrue(response.getStatusCode()==200);
     }
 
-    @Test (testName = "Get Post by id")
+    @Test (testName = "Get Post by id API Test")
     public void getPostByIdApiTest(){
         RequestSpecification getPostRequestSpecification = RestAssured.given().headers(send_headers);
         Response getPostResponse = getPostRequestSpecification.request(Method.GET,getPostByIdEndpoint);
+        JSONObject jsonOwnerData = getJSONObjectFromFile("src/test/resources/json_files/post_data.json");
         getPostResponse.prettyPrint();
 
-
-
-
+        Assert.assertEquals(200, getPostResponse.statusCode());
+        Assert.assertEquals(getPostResponse.statusCode(),200);
+        Assert.assertEquals(getPostResponse.jsonPath().getString("id"), postId);
+        Assert.assertEquals(getPostResponse.jsonPath().getString("image"), jsonOwnerData.get("image"));
+        Assert.assertEquals(getPostResponse.jsonPath().getString("likes"), jsonOwnerData.get("likes"));
+        Assert.assertEquals(getPostResponse.jsonPath().getString("text"), jsonOwnerData.get("text"));
+        //TODO Сделать валидаю tags and owner
     }
 
-
-    @Test
+    @Test (testName = "Sandbox API Test for trying different things")
     public void sandboxApiTest() {
         String randomLikesInt = getRandomValue(2);
         JSONObject jsonRequestBody = getJSONObjectFromFile("src/test/resources/json_files/create_post_payload_request.json");
-
         jsonRequestBody.put("likes", randomLikesInt);
 
 //        RequestSpecification requestSpecification = RestAssured.given().headers(send_headers);
@@ -70,12 +73,14 @@ public class DummyPostApiTests extends BaseDummyTest {
 
     }
 
-    @Test
+    @Test (testName = "Creating a new Post by API Test")
     public void createPostApiTest() {
         //подготовка реквеста на создание пользователя
         String randomLikesInt = getRandomValue(1);
+        String randomPostText = "A " +getRandomText(8)+ " "+ getRandomText(11)+ " " +getRandomText(9);
         JSONObject jsonCreateUserRequestBody = getJSONObjectFromFile("src/test/resources/json_files/create_post_payload_request.json");
         jsonCreateUserRequestBody.put("likes", randomLikesInt);
+        jsonCreateUserRequestBody.put("text", randomPostText);
 
         //отправка запроса на создание пользователя
         RequestSpecification requestSpecification = RestAssured.given().headers(send_headers);
@@ -95,12 +100,14 @@ public class DummyPostApiTests extends BaseDummyTest {
         //TODO доделать валидацию tags
     }
 
-    @Test
+    @Test (testName = "Updating API Test")
     public void updatePostApiTest() {
         //подготовка реквеста на создание пользователя
         String randomLikesInt = getRandomValue(1);
+        String randomPostText = "B " +getRandomText(8)+ " "+ getRandomText(11)+ " " +getRandomText(9);
         JSONObject jsonCreateUserRequestBody = getJSONObjectFromFile("src/test/resources/json_files/create_post_payload_request.json");
         jsonCreateUserRequestBody.put("likes", randomLikesInt);
+        jsonCreateUserRequestBody.put("text", randomPostText);
 
         //отправка запроса на создание пользователя
         RequestSpecification requestSpecification = RestAssured.given().headers(send_headers);
@@ -117,7 +124,9 @@ public class DummyPostApiTests extends BaseDummyTest {
         //Получение данных для обновления поста
         JSONObject jsonUpdateRequestBody = getJSONObjectFromFile("src/test/resources/json_files/update_post_payload_request.json");
         randomLikesInt = getRandomValue(1);
+        randomPostText = "Fre " +getRandomText(8)+ " "+ getRandomText(11)+ " " +getRandomText(9);
         jsonUpdateRequestBody.put("likes", randomLikesInt);
+        jsonUpdateRequestBody.put("text", randomPostText);
 
         //отправка запроса на обновление поста
         requestSpec2.body(jsonUpdateRequestBody.toString());

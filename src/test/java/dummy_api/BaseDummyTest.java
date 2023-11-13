@@ -49,6 +49,18 @@ public class BaseDummyTest {
         return randomString.toString();
     }
 
+    public static String getRandomText(int length) {
+        String charset = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz";
+        StringBuilder randomString = new StringBuilder();
+
+        for (int i = 0; i < length; i++) {
+            int randomIndex = new Random().nextInt(charset.length());
+            char randomChar = charset.charAt(randomIndex);
+            randomString.append(randomChar);
+        }
+        return randomString.toString();
+    }
+
     public static JSONObject getJSONObjectFromFile(String filePath) {
         try {
             String jsonContent = new String(Files.readAllBytes(Paths.get(filePath)));
