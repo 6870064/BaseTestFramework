@@ -57,33 +57,41 @@ public class DummyPostApiTests extends BaseDummyTest {
 
     @Test
     public void createPostApiTest() {
+        //подготовка реквеста на создание пользователя
         String randomLikesInt = getRandomValue(1);
         JSONObject jsonCreateUserRequestBody = getJSONObjectFromFile("src/test/resources/json_files/create_post_payload_request.json");
-
         jsonCreateUserRequestBody.put("likes", randomLikesInt);
 
+        //отправка запроса на создание пользователя
         RequestSpecification requestSpecification = RestAssured.given().headers(send_headers);
         requestSpecification.body(jsonCreateUserRequestBody.toString());
 
-        Response response = requestSpecification.request(Method.POST, createPostEndpoint);
-        response.prettyPrint();
-        Assert.assertEquals(200, response.statusCode());
-        Assert.assertEquals(response.statusCode(),200);
-        Assert.assertEquals(response.jsonPath().getString("text"), jsonCreateUserRequestBody.get("text"));
-        Assert.assertEquals(response.jsonPath().getString("image"),jsonCreateUserRequestBody.get("image"));
-        Assert.assertEquals(response.jsonPath().getString("likes"), randomLikesInt);
+        //получение респонса
+        Response createPostResponse = requestSpecification.request(Method.POST, createPostEndpoint);
+        createPostResponse.prettyPrint();
+
+        //Валидация данных в созданном посте
+        Assert.assertEquals(200, createPostResponse.statusCode());
+        Assert.assertEquals(createPostResponse.statusCode(),200);
+        Assert.assertEquals(createPostResponse.jsonPath().getString("text"), jsonCreateUserRequestBody.get("text"));
+        Assert.assertEquals(createPostResponse.jsonPath().getString("image"),jsonCreateUserRequestBody.get("image"));
+        Assert.assertEquals(createPostResponse.jsonPath().getString("likes"), randomLikesInt);
         //TODO доделать валидацию owner-a
         //TODO доделать валидацию tags
     }
 
     @Test
     public void updatePostApiTest() {
+        //подготовка реквеста на создание пользователя
         String randomLikesInt = getRandomValue(1);
         JSONObject jsonCreateUserRequestBody = getJSONObjectFromFile("src/test/resources/json_files/create_post_payload_request.json");
         jsonCreateUserRequestBody.put("likes", randomLikesInt);
 
+        //отправка запроса на создание пользователя
         RequestSpecification requestSpecification = RestAssured.given().headers(send_headers);
         requestSpecification.body(jsonCreateUserRequestBody.toString());
+
+        //получение респонса
         Response createPostResponse = requestSpecification.request(Method.POST, createPostEndpoint);
         createPostResponse.prettyPrint();
 
@@ -101,7 +109,7 @@ public class DummyPostApiTests extends BaseDummyTest {
         Response updateUserResponse = requestSpec2.request(Method.PUT, updateUserEndpoint); //получение респонса
         updateUserResponse.prettyPrint();
 
-        //Валидация обновленных данных
+        //Валидация данных в обновленном посте
         Assert.assertEquals(updateUserResponse.jsonPath().getString("id"), createPostResponse.jsonPath().getString("id"));
         Assert.assertEquals(updateUserResponse.jsonPath().getString("image"), jsonUpdateRequestBody.get("image"));
         Assert.assertEquals(updateUserResponse.jsonPath().getString("likes"), randomLikesInt);
