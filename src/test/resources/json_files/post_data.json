@@ -1,0 +1,20 @@
+{
+  "id": "654faf489d2bedc28af7049f",
+  "image": "https://randomuser.me/api/portraits/med/men/31.jpg",
+  "likes": 28,
+  "tags": [
+    "plant",
+    "tree",
+    "dog"
+  ],
+  "text": "Gratitude short-coated tan dog on seashore",
+  "publishDate": "2023-11-11T16:43:52.046Z",
+  "updatedDate": "2023-11-11T16:43:52.046Z",
+  "owner": {
+    "id": "60d0fe4f5311236168a109dd",
+    "title": "mr",
+    "firstName": "Miguel",
+    "lastName": "Lima",
+    "picture": "https://randomuser.me/api/portraits/med/men/31.jpg"
+  }
+}

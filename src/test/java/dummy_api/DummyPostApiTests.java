@@ -14,9 +14,12 @@ public class DummyPostApiTests extends BaseDummyTest {
 
     String createPostEndpoint = "/post/create";
     String getPostsListEndpoint = "/post";
-    String getUsersPostEndpoint = "/user/" +userID+ "/post";
+    String getUserPostEndpoint = "/user/" +userID+ "/post";
+    String postId = "654faf489d2bedc28af7049f";
+    String getPostByIdEndpoint = "/post/" + postId;
 
-    @Test
+
+    @Test (testName = "Get List test")
     public void dummyPostsApiTest() {
 
         RequestSpecification requestSpec = RestAssured.given().headers(send_headers);
@@ -25,14 +28,26 @@ public class DummyPostApiTests extends BaseDummyTest {
         Assert.assertTrue(response.getStatusCode()==200);
     }
 
-    @Test
+    @Test (testName = "Get List By User")
     public void dummyPostsListsApiTest() {
 
         RequestSpecification requestSpec = RestAssured.given().headers(send_headers);
-        Response response = requestSpec.request(Method.GET, getUsersPostEndpoint);
+        Response response = requestSpec.request(Method.GET, getUserPostEndpoint);
         response.prettyPrint();
         Assert.assertTrue(response.getStatusCode()==200);
     }
+
+    @Test (testName = "Get Post by id")
+    public void getPostByIdApiTest(){
+        RequestSpecification getPostRequestSpecification = RestAssured.given().headers(send_headers);
+        Response getPostResponse = getPostRequestSpecification.request(Method.GET,getPostByIdEndpoint);
+        getPostResponse.prettyPrint();
+
+
+
+
+    }
+
 
     @Test
     public void sandboxApiTest() {
