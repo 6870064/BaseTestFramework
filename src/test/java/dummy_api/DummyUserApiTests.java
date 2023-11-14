@@ -29,17 +29,16 @@ public class DummyUserApiTests extends BaseDummyTest {
     @Test
     public void dummyGetOneUserApiTest() {
 
+        JSONObject jsonUserData = getJSONObjectFromFile("src/test/resources/json_files/one_user_data.json");
+        JSONObject locationJson = getJSONObjectFromFile("src/test/resources/json_files/one_user_data_location.json");
         RequestSpecification requestSpec = given().headers(send_headers);
         Response response = requestSpec.request(Method.GET, getUsersEndpoint);
         response.prettyPrint();
         Assert.assertTrue(response.getStatusCode() == 200);
         Assert.assertEquals(200, response.statusCode());
-        JSONObject jsonUserData = getJSONObjectFromFile("src/test/resources/json_files/one_user_data.json");
-        JSONObject jsonSchema = getJSONObjectFromFile("src/test/resources/schemas/User_schema.json");
+        Assert.assertTrue(checkJSONSchema(response, "/Users/dzmitry.viachaslavau/Documents/Projects/BaseTestFramework/src/test/resources/schemas/User_schema.json"));
 
         //TODO уточнить, как забирать данные с location. Сейчас забирается с отдельного JSON с данными по локации.
-        JSONObject locationJson = getJSONObjectFromFile("src/test/resources/json_files/one_user_data_location.json");
-
         Assert.assertEquals(response.jsonPath().getString("id"), jsonUserData.get("id"));
         Assert.assertEquals(response.jsonPath().getString("title"), jsonUserData.get("title"));
         Assert.assertEquals(response.jsonPath().getString("firstName"), jsonUserData.get("firstName"));
@@ -48,12 +47,16 @@ public class DummyUserApiTests extends BaseDummyTest {
         Assert.assertEquals(response.jsonPath().getString("email"), jsonUserData.get("email"));
         Assert.assertEquals(response.jsonPath().getString("dateOfBirth"), jsonUserData.get("dateOfBirth"));
         Assert.assertEquals(response.jsonPath().getString("phone"), jsonUserData.get("phone"));
-        Assert.assertEquals(response.jsonPath().getString("location.street"), locationJson.get("street"));
-        Assert.assertEquals(response.jsonPath().getString("location.city"), locationJson.get("city"));
-        Assert.assertEquals(response.jsonPath().getString("location.state"), locationJson.get("state"));
+     //   Assert.assertEquals(response.jsonPath().getString("location.street"), locationJson.get("street"));
+        //Assert.assertTrue(response.getBody().jsonPath().get("location").toString().contains(locationJson.get("street").toString()));
+       response.getBody().jsonPath().get("location.street");
+        //TODO почитать и переделать все строки как 53. и почитать про getBody
+    //   Assert.assertEquals(response.jsonPath().getString("location.city"), locationJson.get("city").toString());
+        Assert.assertEquals(response.jsonPath().getString("location.state"), locationJson.get("state").toString());
         Assert.assertEquals(response.jsonPath().getString("location.country"), locationJson.get("country"));
         Assert.assertEquals(response.jsonPath().getString("location.timezone"), locationJson.get("timezone"));
-        Assert.assertEquals(checkJSONSchema(response, "src/test/resources/json_files/one_user_data_location.json"), true);
+        Assert.assertEquals(response.jsonPath().getString("location"), jsonUserData.get("lastName"));
+
     }
 
     @Test

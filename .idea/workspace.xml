@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a037309-27bc-4d5f-83fe-da076962cb5c" name="Changes" comment="">
+    <list default="true" id="0a037309-27bc-4d5f-83fe-da076962cb5c" name="Changes" comment="Fix of ApiCategoriesValidationTest() Api Test">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/dummy_api/BaseDummyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dummy_api/BaseDummyTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/dummy_api/DummyPostApiTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dummy_api/DummyPostApiTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/json_files/post_data.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/json_files/post_data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dummy_api/DummyUserApiTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dummy_api/DummyUserApiTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,34 +53,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "ignore.preview.features.used": "true",
-    "last_opened_file_path": "/Users/dzmitryviachaslavau/Documents/Projects/BaseTestFramework/src/test/resources/json_files",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/dzmitry.viachaslavau/Documents/Projects/BaseTestFramework/src/test/resources&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="tests.api" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/test/resources/json_files" />
       <recent name="$PROJECT_DIR$/src/test/resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/test/resources/json_files" />
       <recent name="$PROJECT_DIR$/src/test/resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.DummyPostApiTests">
-    <configuration name="DummyPostApiTests" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.DummyUserApiTests.dummyGetOneUserApiTest">
+    <configuration name="DummyApiTests.dummyUsersApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="BaseTestFramework" />
       <extension name="coverage">
         <pattern>
@@ -88,25 +86,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="dummy_api" />
-      <option name="MAIN_CLASS_NAME" value="dummy_api.DummyPostApiTests" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DummyPostApiTests.createPostApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="BaseTestFramework" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="dummy_api.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="dummy_api" />
-      <option name="MAIN_CLASS_NAME" value="dummy_api.DummyPostApiTests" />
-      <option name="METHOD_NAME" value="createPostApiTest" />
+      <option name="MAIN_CLASS_NAME" value="dummy_api.DummyApiTests" />
+      <option name="METHOD_NAME" value="dummyUsersApiTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -114,7 +95,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DummyPostApiTests.dummyPostsApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="DummyUserApiTests.createUserNewTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="BaseTestFramework" />
       <extension name="coverage">
         <pattern>
@@ -123,8 +104,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="dummy_api" />
-      <option name="MAIN_CLASS_NAME" value="dummy_api.DummyPostApiTests" />
-      <option name="METHOD_NAME" value="dummyPostsApiTest" />
+      <option name="MAIN_CLASS_NAME" value="dummy_api.DummyUserApiTests" />
+      <option name="METHOD_NAME" value="createUserNewTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -132,7 +113,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DummyPostApiTests.getPostByIdApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="DummyUserApiTests.deleteUserTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="BaseTestFramework" />
       <extension name="coverage">
         <pattern>
@@ -141,8 +122,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="dummy_api" />
-      <option name="MAIN_CLASS_NAME" value="dummy_api.DummyPostApiTests" />
-      <option name="METHOD_NAME" value="getPostByIdApiTest" />
+      <option name="MAIN_CLASS_NAME" value="dummy_api.DummyUserApiTests" />
+      <option name="METHOD_NAME" value="deleteUserTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -150,7 +131,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DummyPostApiTests.updatePostApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="DummyUserApiTests.dummyGetOneUserApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="BaseTestFramework" />
       <extension name="coverage">
         <pattern>
@@ -159,8 +140,26 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="dummy_api" />
-      <option name="MAIN_CLASS_NAME" value="dummy_api.DummyPostApiTests" />
-      <option name="METHOD_NAME" value="updatePostApiTest" />
+      <option name="MAIN_CLASS_NAME" value="dummy_api.DummyUserApiTests" />
+      <option name="METHOD_NAME" value="dummyGetOneUserApiTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DummyUserApiTests.updateUserTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="BaseTestFramework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dummy_api.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dummy_api" />
+      <option name="MAIN_CLASS_NAME" value="dummy_api.DummyUserApiTests" />
+      <option name="METHOD_NAME" value="updateUserTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -197,19 +196,19 @@
     </configuration>
     <list>
       <item itemvalue="TestNG.LoginTest" />
-      <item itemvalue="TestNG.DummyPostApiTests" />
-      <item itemvalue="TestNG.DummyPostApiTests.createPostApiTest" />
-      <item itemvalue="TestNG.DummyPostApiTests.dummyPostsApiTest" />
-      <item itemvalue="TestNG.DummyPostApiTests.getPostByIdApiTest" />
-      <item itemvalue="TestNG.DummyPostApiTests.updatePostApiTest" />
+      <item itemvalue="TestNG.DummyUserApiTests.dummyGetOneUserApiTest" />
+      <item itemvalue="TestNG.DummyApiTests.dummyUsersApiTest" />
+      <item itemvalue="TestNG.DummyUserApiTests.createUserNewTest" />
+      <item itemvalue="TestNG.DummyUserApiTests.deleteUserTest" />
+      <item itemvalue="TestNG.DummyUserApiTests.updateUserTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.DummyPostApiTests" />
-        <item itemvalue="TestNG.DummyPostApiTests.getPostByIdApiTest" />
-        <item itemvalue="TestNG.DummyPostApiTests.updatePostApiTest" />
-        <item itemvalue="TestNG.DummyPostApiTests.createPostApiTest" />
-        <item itemvalue="TestNG.DummyPostApiTests.dummyPostsApiTest" />
+        <item itemvalue="TestNG.DummyUserApiTests.dummyGetOneUserApiTest" />
+        <item itemvalue="TestNG.DummyUserApiTests.updateUserTest" />
+        <item itemvalue="TestNG.DummyUserApiTests.createUserNewTest" />
+        <item itemvalue="TestNG.DummyUserApiTests.deleteUserTest" />
+        <item itemvalue="TestNG.DummyApiTests.dummyUsersApiTest" />
       </list>
     </recent_temporary>
   </component>
@@ -271,126 +270,49 @@
       <option name="project" value="LOCAL" />
       <updated>1690724849824</updated>
     </task>
-    <task id="LOCAL-00008" summary="Initial commit">
-      <created>1695587128616</created>
+    <task id="LOCAL-00008" summary="Api Test">
+      <created>1697232340463</created>
       <option name="number" value="00008" />
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
-      <updated>1695587128616</updated>
+      <updated>1697232340463</updated>
     </task>
-    <task id="LOCAL-00009" summary="tests">
-      <created>1696242028794</created>
+    <task id="LOCAL-00009" summary="Fox of ApiCategoriesValidationTest() Api Test">
+      <created>1697452275353</created>
       <option name="number" value="00009" />
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
-      <updated>1696242028794</updated>
+      <updated>1697452275354</updated>
     </task>
-    <task id="LOCAL-00010" summary="tests">
-      <created>1697405639102</created>
+    <task id="LOCAL-00010" summary="Fox of ApiCategoriesValidationTest() Api Test">
+      <created>1697554613070</created>
       <option name="number" value="00010" />
       <option name="presentableId" value="LOCAL-00010" />
       <option name="project" value="LOCAL" />
-      <updated>1697405639102</updated>
+      <updated>1697554613070</updated>
     </task>
-    <task id="LOCAL-00011" summary="Dummy first test">
-      <created>1698596043460</created>
+    <task id="LOCAL-00011" summary="Fix of ApiCategoriesValidationTest() Api Test">
+      <created>1698683387468</created>
       <option name="number" value="00011" />
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
-      <updated>1698596043460</updated>
+      <updated>1698683387468</updated>
     </task>
-    <task id="LOCAL-00012" summary="Dummy first test">
-      <created>1698602208749</created>
+    <task id="LOCAL-00012" summary="Fix of ApiCategoriesValidationTest() Api Test">
+      <created>1699282537394</created>
       <option name="number" value="00012" />
       <option name="presentableId" value="LOCAL-00012" />
       <option name="project" value="LOCAL" />
-      <updated>1698602208749</updated>
+      <updated>1699282537394</updated>
     </task>
-    <task id="LOCAL-00013" summary="Dummy first test">
-      <created>1698602823337</created>
+    <task id="LOCAL-00013" summary="Fix of ApiCategoriesValidationTest() Api Test">
+      <created>1699459915948</created>
       <option name="number" value="00013" />
       <option name="presentableId" value="LOCAL-00013" />
       <option name="project" value="LOCAL" />
-      <updated>1698602823337</updated>
+      <updated>1699459915948</updated>
     </task>
-    <task id="LOCAL-00014" summary="Dummy first test">
-      <created>1698603127490</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1698603127490</updated>
-    </task>
-    <task id="LOCAL-00015" summary="User and Post Api tests">
-      <created>1699226081906</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1699226081906</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Fix of all DummyUserApiTests.">
-      <created>1699478941858</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1699478941858</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Fix of updateUserTest.">
-      <created>1699479914982</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1699479914982</updated>
-    </task>
-    <task id="LOCAL-00018" summary="Fix of tests and notes.">
-      <created>1699480352157</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1699480352157</updated>
-    </task>
-    <task id="LOCAL-00019" summary="adding a folder &quot;json_files&quot; for json">
-      <created>1699655708732</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1699655708732</updated>
-    </task>
-    <task id="LOCAL-00020" summary="Create Post Test doesn't work">
-      <created>1699723066777</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1699723066777</updated>
-    </task>
-    <task id="LOCAL-00021" summary="Fix of createPostApiTest()&#10;Created working updatePostApiTest()">
-      <created>1699891165067</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1699891165067</updated>
-    </task>
-    <task id="LOCAL-00022" summary="adding // comments in tests">
-      <created>1699891516558</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1699891516558</updated>
-    </task>
-    <task id="LOCAL-00023" summary="Adding working deletePostApiTest()">
-      <created>1699891994085</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1699891994085</updated>
-    </task>
-    <task id="LOCAL-00024" summary="Started to work with getPostByIdApiTest().">
-      <created>1699892671035</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1699892671035</updated>
-    </task>
-    <option name="localTasksCounter" value="25" />
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -399,20 +321,53 @@
     <MESSAGE value="Editing pom.xml and TestNG.xml." />
     <MESSAGE value="pom fix" />
     <MESSAGE value="allure-results folder is successfully generated." />
-    <MESSAGE value="Chuck Norris tests" />
     <MESSAGE value="Initial commit" />
-    <MESSAGE value="tests" />
-    <MESSAGE value="Dummy first test" />
-    <MESSAGE value="User and Post Api tests" />
-    <MESSAGE value="Fix of all DummyUserApiTests." />
-    <MESSAGE value="Fix of updateUserTest." />
-    <MESSAGE value="Fix of tests and notes." />
-    <MESSAGE value="adding a folder &quot;json_files&quot; for json" />
-    <MESSAGE value="Create Post Test doesn't work" />
-    <MESSAGE value="Fix of createPostApiTest()&#10;Created working updatePostApiTest()" />
-    <MESSAGE value="adding // comments in tests" />
-    <MESSAGE value="Adding working deletePostApiTest()" />
-    <MESSAGE value="Started to work with getPostByIdApiTest()." />
-    <option name="LAST_COMMIT_MESSAGE" value="Started to work with getPostByIdApiTest()." />
+    <MESSAGE value="Chuck Norris tests" />
+    <MESSAGE value="Api Test" />
+    <MESSAGE value="Fox of ApiCategoriesValidationTest() Api Test" />
+    <MESSAGE value="Fix of ApiCategoriesValidationTest() Api Test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix of ApiCategoriesValidationTest() Api Test" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/dummy_api/DummyUserApiTests.java</url>
+          <line>53</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/dummy_api/DummyUserApiTests.java</url>
+          <line>50</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/dummy_api/DummyUserApiTests.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/dummy_api/BaseDummyTest.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/dummy_api/BaseDummyTest.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/dummy_api/DummyUserApiTests.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="TestNG">
+        <watch expression="response.jsonPath().getString(&quot;location.city&quot;)" language="JAVA" />
+        <watch expression="response.jsonPath().getString(&quot;location.city&quot;)" language="JAVA" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

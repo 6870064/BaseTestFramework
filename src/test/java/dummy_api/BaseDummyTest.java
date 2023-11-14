@@ -28,7 +28,7 @@ public class BaseDummyTest {
         RestAssured.baseURI = "https://dummyapi.io/data/v1/";
     }
 
-    public boolean checkJSONSchema(Response response, String pathToSchema) {
+    public static boolean checkJSONSchema(Response response, String pathToSchema) {
         try {
             response.then().assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath(pathToSchema));
             return true;// think about it
