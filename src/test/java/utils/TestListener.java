@@ -25,7 +25,7 @@ public class TestListener implements ITestListener {
     @Override
     public void onTestFailure(ITestResult iTestResult) {
         //TODO Api request to set failed status of test case
-     //   AllureUtils.takeScreenshot();
+        //   AllureUtils.takeScreenshot();
         log.info("-------------- FAILED TEST {} Duration: {} ----------------", iTestResult.getName(),
                 getExecutionTime(iTestResult));
     }
@@ -33,7 +33,7 @@ public class TestListener implements ITestListener {
     @Override
     public void onTestSkipped(ITestResult iTestResult) {
         //TODO Api request to set skipped status of test case
-   //     AllureUtils.takeScreenshot();
+        //     AllureUtils.takeScreenshot();
         log.info("--------- SKIPPING TEST {} ---------", iTestResult.getName());
     }
 

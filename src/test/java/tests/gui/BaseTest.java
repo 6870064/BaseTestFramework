@@ -24,7 +24,7 @@ public abstract class BaseTest {
     @Parameters({"browser"})
     @BeforeMethod()
     public void setUp(@Optional("chrome") String browser) {
-    driver = webDriverInitializer.driverInitialization();
+        driver = webDriverInitializer.driverInitialization();
     }
 
     @AfterMethod()

@@ -8,7 +8,7 @@ import utils.TestListener;
 
 import static org.testng.Assert.assertTrue;
 
-@Listeners({ TestListener.class })
+@Listeners({TestListener.class})
 @Epic("Regression Tests")
 @Feature("Login Feature")
 @Log4j2
