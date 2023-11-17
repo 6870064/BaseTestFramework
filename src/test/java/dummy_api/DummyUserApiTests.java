@@ -48,10 +48,13 @@ public class DummyUserApiTests extends BaseDummyTest {
         Assert.assertEquals(response.getBody().jsonPath().get("lastName"), jsonUserData.get("lastName"));
         Assert.assertEquals(response.getBody().jsonPath().get("gender"), jsonUserData.get("gender"));
         Assert.assertEquals(response.getBody().jsonPath().get("email"), jsonUserData.get("email"));
+        //TODO https://www.baeldung.com/jsonassert
+     //   JSONAssert.assertEquals(response.getBody().jsonPath().getJsonObject(), jsonUserData, true);
+
         Assert.assertEquals(response.getBody().jsonPath().get("dateOfBirth"), jsonUserData.get("dateOfBirth"));
         Assert.assertEquals(response.getBody().jsonPath().get("phone"), jsonUserData.get("phone"));
-        Assert.assertEquals(response.getBody().jsonPath().get("location.street"), locationJson.get("street"));
-       Assert.assertEquals(response.getBody().jsonPath().get("location.city"), locationJson.get("city").toString());
+        Assert.assertEquals(response.getBody().jsonPath().get("location.street"), jsonUserData.getJSONObject("location").get("street"));
+       Assert.assertEquals(response.getBody().jsonPath().get("location.city"), jsonUserData.getJSONObject("location").get("city"));
         Assert.assertEquals(response.getBody().jsonPath().get("location.state"), locationJson.get("state").toString());
         Assert.assertEquals(response.getBody().jsonPath().get("location.country"), locationJson.get("country"));
         Assert.assertEquals(response.getBody().jsonPath().get("location.timezone"), locationJson.get("timezone"));
