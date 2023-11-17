@@ -78,7 +78,9 @@ public class DummyPostApiTests extends BaseDummyTest {
         //подготовка реквеста на создание пользователя
         String randomLikesInt = getRandomValue(1);
         String randomPostText = "A " + getRandomText(8) + " " + getRandomText(11) + " " + getRandomText(9);
-        JSONObject jsonCreateUserRequestBody = getJSONObjectFromFile("src/test/resources/json_files/create_post_payload_request.json");
+        JSONObject jsonCreateUserRequestBody = getJSONObjectFromFile("src/json_files/create_post_payload_request.json");
+        JSONObject jsonUserData = getJSONObjectFromFile("src/json_files/one_user_data.json");
+
         jsonCreateUserRequestBody.put("likes", randomLikesInt);
         jsonCreateUserRequestBody.put("text", randomPostText);
 
@@ -96,8 +98,11 @@ public class DummyPostApiTests extends BaseDummyTest {
         Assert.assertEquals(createPostResponse.jsonPath().getString("text"), jsonCreateUserRequestBody.get("text"));
         Assert.assertEquals(createPostResponse.jsonPath().getString("image"), jsonCreateUserRequestBody.get("image"));
         Assert.assertEquals(createPostResponse.jsonPath().getString("likes"), randomLikesInt);
-        //TODO доделать валидацию owner-a
-        //TODO доделать валидацию tags
+        Assert.assertEquals(createPostResponse.getBody().jsonPath().get("owner.id"), jsonUserData.get("id"));
+        Assert.assertEquals(createPostResponse.getBody().jsonPath().get("owner.title"), jsonUserData.get("title"));
+        Assert.assertEquals(createPostResponse.getBody().jsonPath().get("owner.firstName"), jsonUserData.get("firstName"));
+        Assert.assertEquals(createPostResponse.getBody().jsonPath().get("owner.lastName"), jsonUserData.get("lastName"));
+        Assert.assertEquals(createPostResponse.getBody().jsonPath().get("owner.picture"), jsonUserData.get("picture"));
     }
 
     @Test(testName = "Updating API Test")
@@ -105,7 +110,9 @@ public class DummyPostApiTests extends BaseDummyTest {
         //подготовка реквеста на создание пользователя
         String randomLikesInt = getRandomValue(1);
         String randomPostText = "B " + getRandomText(8) + " " + getRandomText(11) + " " + getRandomText(9);
-        JSONObject jsonCreateUserRequestBody = getJSONObjectFromFile("src/test/resources/json_files/create_post_payload_request.json");
+        JSONObject jsonCreateUserRequestBody = getJSONObjectFromFile("src/json_files/create_post_payload_request.json");
+        JSONObject jsonUserData = getJSONObjectFromFile("src/json_files/one_user_data.json");
+
         jsonCreateUserRequestBody.put("likes", randomLikesInt);
         jsonCreateUserRequestBody.put("text", randomPostText);
 
@@ -122,7 +129,7 @@ public class DummyPostApiTests extends BaseDummyTest {
         RequestSpecification requestSpec2 = given().headers(send_headers);
 
         //Получение данных для обновления поста
-        JSONObject jsonUpdateRequestBody = getJSONObjectFromFile("src/test/resources/json_files/update_post_payload_request.json");
+        JSONObject jsonUpdateRequestBody = getJSONObjectFromFile("src/json_files/update_post_payload_request.json");
         randomLikesInt = getRandomValue(1);
         randomPostText = "Fre " + getRandomText(8) + " " + getRandomText(11) + " " + getRandomText(9);
         jsonUpdateRequestBody.put("likes", randomLikesInt);
@@ -138,8 +145,12 @@ public class DummyPostApiTests extends BaseDummyTest {
         Assert.assertEquals(updateUserResponse.jsonPath().getString("image"), jsonUpdateRequestBody.get("image"));
         Assert.assertEquals(updateUserResponse.jsonPath().getString("likes"), randomLikesInt);
         Assert.assertEquals(updateUserResponse.jsonPath().getString("text"), jsonUpdateRequestBody.get("text"));
-        //TODO доделать валидацию owner-a
-        //TODO доделать валидацию tags
+        Assert.assertEquals(createPostResponse.getBody().jsonPath().get("owner.id"), jsonUserData.get("id"));
+        Assert.assertEquals(createPostResponse.getBody().jsonPath().get("owner.title"), jsonUserData.get("title"));
+        Assert.assertEquals(createPostResponse.getBody().jsonPath().get("owner.firstName"), jsonUserData.get("firstName"));
+        Assert.assertEquals(createPostResponse.getBody().jsonPath().get("owner.lastName"), jsonUserData.get("lastName"));
+        Assert.assertEquals(createPostResponse.getBody().jsonPath().get("owner.picture"), jsonUserData.get("picture"));
+
     }
 
     @Test

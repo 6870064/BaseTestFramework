@@ -4,18 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a037309-27bc-4d5f-83fe-da076962cb5c" name="Changes" comment="Fix of DummyUserApiTests">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="0a037309-27bc-4d5f-83fe-da076962cb5c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/json_files/one_user_data_location.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/dummy_api/DummyPostApiTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dummy_api/DummyPostApiTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/dummy_api/DummyUserApiTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dummy_api/DummyUserApiTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/gui/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/gui/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/gui/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/gui/LoginTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/utils/AllureUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utils/AllureUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/utils/PropertyReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utils/PropertyReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/utils/TestListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utils/TestListener.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,8 +77,8 @@
       <recent name="$PROJECT_DIR$/src/test/resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.DummyUserApiTests.updateUserTest">
-    <configuration name="DummyPostApiTests" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.DummyPostApiTests.updatePostApiTest">
+    <configuration name="DummyPostApiTests.createPostApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="BaseTestFramework" />
       <extension name="coverage">
         <pattern>
@@ -97,14 +88,15 @@
       </extension>
       <option name="PACKAGE_NAME" value="dummy_api" />
       <option name="MAIN_CLASS_NAME" value="dummy_api.DummyPostApiTests" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="METHOD_NAME" value="createPostApiTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DummyUserApiTests" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="DummyPostApiTests.updatePostApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="BaseTestFramework" />
       <extension name="coverage">
         <pattern>
@@ -113,8 +105,9 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="dummy_api" />
-      <option name="MAIN_CLASS_NAME" value="dummy_api.DummyUserApiTests" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="MAIN_CLASS_NAME" value="dummy_api.DummyPostApiTests" />
+      <option name="METHOD_NAME" value="updatePostApiTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -204,19 +197,19 @@
     </configuration>
     <list>
       <item itemvalue="TestNG.LoginTest" />
+      <item itemvalue="TestNG.DummyPostApiTests.createPostApiTest" />
       <item itemvalue="TestNG.DummyUserApiTests.createUserNewTest" />
       <item itemvalue="TestNG.DummyUserApiTests.updateUserTest" />
-      <item itemvalue="TestNG.DummyPostApiTests" />
-      <item itemvalue="TestNG.DummyUserApiTests" />
+      <item itemvalue="TestNG.DummyPostApiTests.updatePostApiTest" />
       <item itemvalue="TestNG.DummyUserApiTests.dummyGetOneUserApiTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.DummyPostApiTests.updatePostApiTest" />
+        <item itemvalue="TestNG.DummyPostApiTests.createPostApiTest" />
         <item itemvalue="TestNG.DummyUserApiTests.updateUserTest" />
         <item itemvalue="TestNG.DummyUserApiTests.createUserNewTest" />
         <item itemvalue="TestNG.DummyUserApiTests.dummyGetOneUserApiTest" />
-        <item itemvalue="TestNG.DummyUserApiTests" />
-        <item itemvalue="TestNG.DummyPostApiTests" />
       </list>
     </recent_temporary>
   </component>
@@ -411,7 +404,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700087407223</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="jsonUserData.getJSONObject(&quot;location&quot;).get(&quot;&quot;)">
+      <created>1700254805243</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1700254805243</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -436,6 +436,7 @@
     <MESSAGE value="Started to work with getPostByIdApiTest()." />
     <MESSAGE value="Posts API Tests" />
     <MESSAGE value="Fix of DummyUserApiTests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix of DummyUserApiTests" />
+    <MESSAGE value="jsonUserData.getJSONObject(&quot;location&quot;).get(&quot;&quot;)" />
+    <option name="LAST_COMMIT_MESSAGE" value="jsonUserData.getJSONObject(&quot;location&quot;).get(&quot;&quot;)" />
   </component>
 </project>
