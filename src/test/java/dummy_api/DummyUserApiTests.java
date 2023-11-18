@@ -37,8 +37,9 @@ public class DummyUserApiTests extends BaseDummyTest {
         Assert.assertTrue(response.getStatusCode() == 200);
         Assert.assertEquals(200, response.statusCode());
 
-        //TODO фикс валидации схемы
-        //   Assert.assertTrue(checkJSONSchema(response, "/Users/dzmitry.viachaslavau/Documents/Projects/BaseTestFramework/src/schemas/User_schema.json"));
+        //валидация схемы респонса
+        String jsonPath = "schema/user/getUserSchema.json";
+        Assert.assertTrue(checkJSONSchema(response, jsonPath));
 
         Assert.assertEquals(response.getBody().jsonPath().get("id"), jsonUserData.get("id"));
         Assert.assertEquals(response.getBody().jsonPath().get("title"), jsonUserData.get("title"));
@@ -67,6 +68,10 @@ public class DummyUserApiTests extends BaseDummyTest {
         Response response = requestSpec.request(Method.POST, createUserEndpoint);
         response.prettyPrint();
 
+        //валидация схемы респонса
+        String jsonPath = "schema/user/createUserSchema.json";
+        Assert.assertTrue(checkJSONSchema(response, jsonPath));
+
         Assert.assertEquals(200, response.statusCode());
         Assert.assertEquals(response.statusCode(), 200);
         Assert.assertEquals(response.getBody().jsonPath().get("title"), jsonRequestBody.get("title"));
@@ -84,7 +89,6 @@ public class DummyUserApiTests extends BaseDummyTest {
         String randomEmail = "test" + getRandomValue(5) + "@gmail.com";
         JSONObject jsonRequestBody = getJSONObjectFromFile("src/json_files/create_user_payload_request.json");
         jsonRequestBody.put("email", randomEmail);
-
 
         RequestSpecification requestSpec = given().headers(send_headers);
         requestSpec.body(jsonRequestBody.toString());
@@ -106,6 +110,10 @@ public class DummyUserApiTests extends BaseDummyTest {
         updateUserResponse.prettyPrint();
 
         //Проверка ответа на 200 статус и эквивалентность данных с репонса с данными обновленного пользователя
+
+        //валидация схемы респонса
+        String jsonPath = "schema/user/createUserSchema.json";
+        Assert.assertTrue(checkJSONSchema(updateUserResponse, jsonPath));
         Assert.assertTrue(updateUserResponse.getStatusCode() == 200);
         Assert.assertEquals(200, updateUserResponse.statusCode());
         Assert.assertEquals(updateUserResponse.getBody().jsonPath().get("id"), createUserResponse.jsonPath().getString("id"));

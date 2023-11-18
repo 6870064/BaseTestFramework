@@ -70,4 +70,23 @@ public class BaseDummyTest {
             throw new RuntimeException(e);
         }
     }
+
+//    public static void JsonSchemaValidationExample(String schemaString, String jsonDataString) {
+//
+//       //Parse the schema and data
+//       JSONObject rawSchema = new JSONObject(new JSONTokener(schemaString));
+//       JSONObject jsonData = new JSONObject(new JSONTokener(jsonDataString));
+//
+//       //Create a JSON Schema object
+//        Schema schema = SchemaLoader.load(rawSchema);
+//
+//        // Perform validation
+//        try {
+//            schema.validate(jsonData);
+//            System.out.println("Validation passed!");
+//        } catch (Exception e) {
+//            System.out.println("Validation failed: " + e.getMessage());
+//        }
+//
+//    }
 }

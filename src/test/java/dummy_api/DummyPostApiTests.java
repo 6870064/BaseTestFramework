@@ -18,13 +18,17 @@ public class DummyPostApiTests extends BaseDummyTest {
     String getPostByIdEndpoint = "/post/" + postId;
 
 
-    @Test(testName = "Get List API test")
+    @Test(testName = "Get List of Posts API test")
     public void dummyPostsApiTest() {
 
         RequestSpecification requestSpec = RestAssured.given().headers(send_headers);
         Response response = requestSpec.request(Method.GET, getPostsListEndpoint);
         response.prettyPrint();
         Assert.assertTrue(response.getStatusCode() == 200);
+
+        //валидация схемы респонса
+        String jsonPath = "schema/post/getListsOfPostsSchema.json";
+        Assert.assertTrue(checkJSONSchema(response, jsonPath));
     }
 
     @Test(testName = "Get List By User API Test")
@@ -40,16 +44,18 @@ public class DummyPostApiTests extends BaseDummyTest {
     public void getPostByIdApiTest() {
         RequestSpecification getPostRequestSpecification = RestAssured.given().headers(send_headers);
         Response getPostResponse = getPostRequestSpecification.request(Method.GET, getPostByIdEndpoint);
-        JSONObject jsonOwnerData = getJSONObjectFromFile("src/test/resources/json_files/post_data.json");
+        JSONObject jsonOwnerData = getJSONObjectFromFile("src/json_files/post_data.json");
         getPostResponse.prettyPrint();
 
+        //валидация схемы респонса
+        String jsonPath = "schema/post/getListsOfPostsSchema.json";
+        Assert.assertTrue(checkJSONSchema(getPostResponse, jsonPath));
         Assert.assertEquals(200, getPostResponse.statusCode());
         Assert.assertEquals(getPostResponse.statusCode(), 200);
         Assert.assertEquals(getPostResponse.jsonPath().getString("id"), postId);
         Assert.assertEquals(getPostResponse.jsonPath().getString("image"), jsonOwnerData.get("image"));
         Assert.assertEquals(getPostResponse.jsonPath().getString("likes"), jsonOwnerData.get("likes"));
         Assert.assertEquals(getPostResponse.jsonPath().getString("text"), jsonOwnerData.get("text"));
-        //TODO Сделать валидаю tags and owner
     }
 
     @Test(testName = "Creating a new Post by API Test")
@@ -71,6 +77,9 @@ public class DummyPostApiTests extends BaseDummyTest {
         Response createPostResponse = requestSpecification.request(Method.POST, createPostEndpoint);
         createPostResponse.prettyPrint();
 
+        //валидация схемы респонса
+        String jsonPath = "schema/post/createPostSchema.json";
+        Assert.assertTrue(checkJSONSchema(createPostResponse, jsonPath));
         //Валидация данных в созданном посте
         Assert.assertEquals(200, createPostResponse.statusCode());
         Assert.assertEquals(createPostResponse.statusCode(), 200);
@@ -119,6 +128,10 @@ public class DummyPostApiTests extends BaseDummyTest {
         Response updateUserResponse = requestSpec2.request(Method.PUT, updateUserEndpoint); //получение респонса
         updateUserResponse.prettyPrint();
 
+        //валидация схемы респонса
+        String jsonPath = "schema/post/createPostSchema.json";
+        Assert.assertTrue(checkJSONSchema(createPostResponse, jsonPath));
+
         //Валидация данных в обновленном посте
         Assert.assertEquals(updateUserResponse.jsonPath().getString("id"), createPostResponse.jsonPath().getString("id"));
         Assert.assertEquals(updateUserResponse.jsonPath().getString("image"), jsonUpdateRequestBody.get("image"));
@@ -129,7 +142,6 @@ public class DummyPostApiTests extends BaseDummyTest {
         Assert.assertEquals(createPostResponse.getBody().jsonPath().get("owner.firstName"), jsonUserData.get("firstName"));
         Assert.assertEquals(createPostResponse.getBody().jsonPath().get("owner.lastName"), jsonUserData.get("lastName"));
         Assert.assertEquals(createPostResponse.getBody().jsonPath().get("owner.picture"), jsonUserData.get("picture"));
-
     }
 
     @Test

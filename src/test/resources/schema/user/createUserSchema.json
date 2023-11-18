@@ -1,0 +1,110 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.com/object1700318115.json",
+  "title": "Root",
+  "type": "object",
+  "required": [
+    "id",
+    "title",
+    "firstName",
+    "lastName",
+    "gender",
+    "email",
+    "dateOfBirth",
+    "registerDate",
+    "updatedDate"
+  ],
+  "properties": {
+    "id": {
+      "$id": "#root/id",
+      "title": "Id",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "6558cb5e0c919b7559dbc750"
+      ],
+      "pattern": "^.*$"
+    },
+    "title": {
+      "$id": "#root/title",
+      "title": "Title",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "mr"
+      ],
+      "pattern": "^.*$"
+    },
+    "firstName": {
+      "$id": "#root/firstName",
+      "title": "Firstname",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "Billy"
+      ],
+      "pattern": "^.*$"
+    },
+    "lastName": {
+      "$id": "#root/lastName",
+      "title": "Lastname",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "Bob Tornton"
+      ],
+      "pattern": "^.*$"
+    },
+    "gender": {
+      "$id": "#root/gender",
+      "title": "Gender",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "male"
+      ],
+      "pattern": "^.*$"
+    },
+    "email": {
+      "$id": "#root/email",
+      "title": "Email",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "test17736@gmail.com"
+      ],
+      "pattern": "^.*$"
+    },
+    "dateOfBirth": {
+      "$id": "#root/dateOfBirth",
+      "title": "Dateofbirth",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "1980-07-05T22:21:32.623Z"
+      ],
+      "pattern": "^.*$"
+    },
+    "registerDate": {
+      "$id": "#root/registerDate",
+      "title": "Registerdate",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "2023-11-18T14:34:06.550Z"
+      ],
+      "pattern": "^.*$"
+    },
+    "updatedDate": {
+      "$id": "#root/updatedDate",
+      "title": "Updateddate",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "2023-11-18T14:34:06.550Z"
+      ],
+      "pattern": "^.*$"
+    }
+  }
+}

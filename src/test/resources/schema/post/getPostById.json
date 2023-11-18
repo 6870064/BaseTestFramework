@@ -1,0 +1,170 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.com/object1700319093.json",
+  "title": "Root",
+  "type": "object",
+  "required": [
+    "id",
+    "image",
+    "likes",
+    "link",
+    "tags",
+    "text",
+    "publishDate",
+    "updatedDate",
+    "owner"
+  ],
+  "properties": {
+    "id": {
+      "$id": "#root/id",
+      "title": "Id",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "654faf489d2bedc28af7049f"
+      ],
+      "pattern": "^.*$"
+    },
+    "image": {
+      "$id": "#root/image",
+      "title": "Image",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "https://randomuser.me/api/portraits/med/men/31.jpg"
+      ],
+      "pattern": "^.*$"
+    },
+    "likes": {
+      "$id": "#root/likes",
+      "title": "Likes",
+      "type": "integer",
+      "examples": [
+        28
+      ],
+      "default": 0
+    },
+    "link": {
+      "$id": "#root/link",
+      "title": "Link",
+      "type": "string",
+      "default": "",
+      "examples": [
+        ""
+      ],
+      "pattern": "^.*$"
+    },
+    "tags": {
+      "$id": "#root/tags",
+      "title": "Tags",
+      "type": "array",
+      "default": [],
+      "items":{
+        "$id": "#root/tags/items",
+        "title": "Items",
+        "type": "string",
+        "default": "",
+        "examples": [
+          "plant"
+        ],
+        "pattern": "^.*$"
+      }
+    },
+    "text": {
+      "$id": "#root/text",
+      "title": "Text",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "Gratitude short-coated tan dog on seashore"
+      ],
+      "pattern": "^.*$"
+    },
+    "publishDate": {
+      "$id": "#root/publishDate",
+      "title": "Publishdate",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "2023-11-11T16:43:52.046Z"
+      ],
+      "pattern": "^.*$"
+    },
+    "updatedDate": {
+      "$id": "#root/updatedDate",
+      "title": "Updateddate",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "2023-11-11T16:43:52.046Z"
+      ],
+      "pattern": "^.*$"
+    },
+    "owner": {
+      "$id": "#root/owner",
+      "title": "Owner",
+      "type": "object",
+      "required": [
+        "id",
+        "title",
+        "firstName",
+        "lastName",
+        "picture"
+      ],
+      "properties": {
+        "id": {
+          "$id": "#root/owner/id",
+          "title": "Id",
+          "type": "string",
+          "default": "",
+          "examples": [
+            "60d0fe4f5311236168a109dd"
+          ],
+          "pattern": "^.*$"
+        },
+        "title": {
+          "$id": "#root/owner/title",
+          "title": "Title",
+          "type": "string",
+          "default": "",
+          "examples": [
+            "mr"
+          ],
+          "pattern": "^.*$"
+        },
+        "firstName": {
+          "$id": "#root/owner/firstName",
+          "title": "Firstname",
+          "type": "string",
+          "default": "",
+          "examples": [
+            "Miguel"
+          ],
+          "pattern": "^.*$"
+        },
+        "lastName": {
+          "$id": "#root/owner/lastName",
+          "title": "Lastname",
+          "type": "string",
+          "default": "",
+          "examples": [
+            "Lima"
+          ],
+          "pattern": "^.*$"
+        },
+        "picture": {
+          "$id": "#root/owner/picture",
+          "title": "Picture",
+          "type": "string",
+          "default": "",
+          "examples": [
+            "https://randomuser.me/api/portraits/med/men/31.jpg"
+          ],
+          "pattern": "^.*$"
+        }
+      }
+    }
+
+  }
+}
