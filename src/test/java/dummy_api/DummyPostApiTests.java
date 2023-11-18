@@ -14,8 +14,7 @@ public class DummyPostApiTests extends BaseDummyTest {
 
     String createPostEndpoint = "/post/create";
     String getPostsListEndpoint = "/post";
-    String getUserPostEndpoint = "/user/" + userID + "/post";
-    String postId = "654faf489d2bedc28af7049f";
+    String getUserPostEndpoint = "/user/" + userId + "/post";
     String getPostByIdEndpoint = "/post/" + postId;
 
 
@@ -51,26 +50,6 @@ public class DummyPostApiTests extends BaseDummyTest {
         Assert.assertEquals(getPostResponse.jsonPath().getString("likes"), jsonOwnerData.get("likes"));
         Assert.assertEquals(getPostResponse.jsonPath().getString("text"), jsonOwnerData.get("text"));
         //TODO Сделать валидаю tags and owner
-    }
-
-    @Test(testName = "Sandbox API Test for trying different things")
-    public void sandboxApiTest() {
-        String randomLikesInt = getRandomValue(2);
-        JSONObject jsonRequestBody = getJSONObjectFromFile("src/test/resources/json_files/create_post_payload_request.json");
-        jsonRequestBody.put("likes", randomLikesInt);
-
-//        RequestSpecification requestSpecification = RestAssured.given().headers(send_headers);
-//        requestSpecification.body(jsonRequestBody.toString());
-//
-//        Response response = requestSpecification.request(Method.POST, createPostEndpoint);
-//        response.prettyPrint();
-//
-//
-//        JSONObject jsonBody = response.jsonPath().getString("text");
-//        jsonBody.get("id");
-//
-//        System.out.println(jsonBody.get("id"));
-
     }
 
     @Test(testName = "Creating a new Post by API Test")

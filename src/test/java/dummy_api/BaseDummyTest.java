@@ -15,7 +15,8 @@ import java.util.Random;
 public class BaseDummyTest {
 
 
-    String userID = "60d0fe4f5311236168a109dd";
+    String userId = "60d0fe4f5311236168a109dd";
+    String postId = "654faf489d2bedc28af7049f";
     HashMap<String, String> send_headers = new HashMap<>() {{
         put("app-id", "653e7ecc4cdc863e717a3587");
         put("Content-type", "application/json");

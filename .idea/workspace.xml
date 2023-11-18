@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a037309-27bc-4d5f-83fe-da076962cb5c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/json_files/create_comment_payload_request.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/dummy_api/DummyCommentApiTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/dummy_api/DummyTagApiTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dummy_api/BaseDummyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dummy_api/BaseDummyTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/dummy_api/DummyPostApiTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dummy_api/DummyPostApiTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dummy_api/DummyUserApiTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dummy_api/DummyUserApiTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,24 +55,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;ignore.preview.features.used&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/dzmitryviachaslavau/Documents/Projects/BaseTestFramework/src/test/resources/json_files&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "ignore.preview.features.used": "true",
+    "last_opened_file_path": "/Users/dzmitryviachaslavau/Documents/Projects/BaseTestFramework/src/json_files",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="tests.api" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/json_files" />
       <recent name="$PROJECT_DIR$/src/test/resources/json_files" />
       <recent name="$PROJECT_DIR$/src/test/resources" />
     </key>
@@ -76,8 +82,83 @@
       <recent name="$PROJECT_DIR$/src/test/resources/json_files" />
       <recent name="$PROJECT_DIR$/src/test/resources" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="dummy_api" />
+    </key>
   </component>
-  <component name="RunManager" selected="TestNG.DummyPostApiTests.updatePostApiTest">
+  <component name="RunManager" selected="TestNG.DummyCommentApiTests.createCommentApiTest">
+    <configuration name="DummyCommentApiTests.createCommentApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="BaseTestFramework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dummy_api.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dummy_api" />
+      <option name="MAIN_CLASS_NAME" value="dummy_api.DummyCommentApiTests" />
+      <option name="METHOD_NAME" value="createCommentApiTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DummyCommentApiTests.createUserApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="BaseTestFramework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dummy_api.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dummy_api" />
+      <option name="MAIN_CLASS_NAME" value="dummy_api.DummyCommentApiTests" />
+      <option name="METHOD_NAME" value="createUserApiTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DummyCommentApiTests.getListByPostApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="BaseTestFramework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dummy_api.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dummy_api" />
+      <option name="MAIN_CLASS_NAME" value="dummy_api.DummyCommentApiTests" />
+      <option name="METHOD_NAME" value="getListByPostApiTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DummyCommentApiTests.getListByUserApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="BaseTestFramework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dummy_api.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dummy_api" />
+      <option name="MAIN_CLASS_NAME" value="dummy_api.DummyCommentApiTests" />
+      <option name="METHOD_NAME" value="getListByUserApiTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DummyPostApiTests.createPostApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="BaseTestFramework" />
       <extension name="coverage">
@@ -89,78 +170,6 @@
       <option name="PACKAGE_NAME" value="dummy_api" />
       <option name="MAIN_CLASS_NAME" value="dummy_api.DummyPostApiTests" />
       <option name="METHOD_NAME" value="createPostApiTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DummyPostApiTests.updatePostApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="BaseTestFramework" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="dummy_api.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="dummy_api" />
-      <option name="MAIN_CLASS_NAME" value="dummy_api.DummyPostApiTests" />
-      <option name="METHOD_NAME" value="updatePostApiTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DummyUserApiTests.createUserNewTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="BaseTestFramework" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="dummy_api.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="dummy_api" />
-      <option name="MAIN_CLASS_NAME" value="dummy_api.DummyUserApiTests" />
-      <option name="METHOD_NAME" value="createUserNewTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DummyUserApiTests.dummyGetOneUserApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="BaseTestFramework" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="dummy_api.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="dummy_api" />
-      <option name="MAIN_CLASS_NAME" value="dummy_api.DummyUserApiTests" />
-      <option name="METHOD_NAME" value="dummyGetOneUserApiTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DummyUserApiTests.updateUserTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="BaseTestFramework" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="dummy_api.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="dummy_api" />
-      <option name="MAIN_CLASS_NAME" value="dummy_api.DummyUserApiTests" />
-      <option name="METHOD_NAME" value="updateUserTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -197,19 +206,19 @@
     </configuration>
     <list>
       <item itemvalue="TestNG.LoginTest" />
+      <item itemvalue="TestNG.DummyCommentApiTests.createCommentApiTest" />
+      <item itemvalue="TestNG.DummyCommentApiTests.createUserApiTest" />
+      <item itemvalue="TestNG.DummyCommentApiTests.getListByPostApiTest" />
+      <item itemvalue="TestNG.DummyCommentApiTests.getListByUserApiTest" />
       <item itemvalue="TestNG.DummyPostApiTests.createPostApiTest" />
-      <item itemvalue="TestNG.DummyUserApiTests.createUserNewTest" />
-      <item itemvalue="TestNG.DummyUserApiTests.updateUserTest" />
-      <item itemvalue="TestNG.DummyPostApiTests.updatePostApiTest" />
-      <item itemvalue="TestNG.DummyUserApiTests.dummyGetOneUserApiTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.DummyPostApiTests.updatePostApiTest" />
+        <item itemvalue="TestNG.DummyCommentApiTests.createCommentApiTest" />
         <item itemvalue="TestNG.DummyPostApiTests.createPostApiTest" />
-        <item itemvalue="TestNG.DummyUserApiTests.updateUserTest" />
-        <item itemvalue="TestNG.DummyUserApiTests.createUserNewTest" />
-        <item itemvalue="TestNG.DummyUserApiTests.dummyGetOneUserApiTest" />
+        <item itemvalue="TestNG.DummyCommentApiTests.getListByUserApiTest" />
+        <item itemvalue="TestNG.DummyCommentApiTests.createUserApiTest" />
+        <item itemvalue="TestNG.DummyCommentApiTests.getListByPostApiTest" />
       </list>
     </recent_temporary>
   </component>
@@ -411,7 +420,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700254805243</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="jsonUserData.getJSONObject(&quot;location&quot;).get(&quot;&quot;) in Post Tests">
+      <created>1700255771975</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1700255771975</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -437,6 +453,7 @@
     <MESSAGE value="Posts API Tests" />
     <MESSAGE value="Fix of DummyUserApiTests" />
     <MESSAGE value="jsonUserData.getJSONObject(&quot;location&quot;).get(&quot;&quot;)" />
-    <option name="LAST_COMMIT_MESSAGE" value="jsonUserData.getJSONObject(&quot;location&quot;).get(&quot;&quot;)" />
+    <MESSAGE value="jsonUserData.getJSONObject(&quot;location&quot;).get(&quot;&quot;) in Post Tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="jsonUserData.getJSONObject(&quot;location&quot;).get(&quot;&quot;) in Post Tests" />
   </component>
 </project>

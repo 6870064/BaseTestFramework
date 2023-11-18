@@ -13,7 +13,7 @@ import static io.restassured.RestAssured.given;
 @Log4j2
 public class DummyUserApiTests extends BaseDummyTest {
 
-    String getUsersEndpoint = "/user/" + userID;
+    String getUsersEndpoint = "/user/" + userId;
     String getUsersListEndpoint = "/user";
     String createUserEndpoint = "/user/create";
 
