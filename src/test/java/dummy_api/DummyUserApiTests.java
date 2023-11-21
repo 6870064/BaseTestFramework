@@ -68,7 +68,12 @@ public class DummyUserApiTests extends BaseDummyTest {
         Response response = requestSpec.request(Method.POST, createUserEndpoint);
         response.prettyPrint();
 
-        //валидация схемы респонса
+        /*
+        валидация схемы респонса
+        Для таких методов схема должна лежать в иерархии ресурсов, а не кода.
+        Папку schema нужно было положить в ресурсы (папка resources считается за корневую папку для доставания).
+         */
+
         String jsonPath = "schema/user/createUserSchema.json";
         Assert.assertTrue(checkJSONSchema(response, jsonPath));
 
